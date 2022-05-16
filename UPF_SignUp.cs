@@ -16,5 +16,22 @@ namespace UPF_App
         {
             InitializeComponent();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UPF_Search UPF_S = new UPF_Search();
+            UPF_S.Show();
+            Visible = false;
+        }
     }
 }

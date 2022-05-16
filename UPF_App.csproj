@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="UPF_Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UPF_Search.Designer.cs">
+      <DependentUpon>UPF_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UPF_SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UPF_SignUp.Designer.cs">
+      <DependentUpon>UPF_SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +69,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UPF_SignUp.aa.resx">
+      <DependentUpon>UPF_SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UPF_SignUp.resx">
+      <DependentUpon>UPF_SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UPF_Search.resx">
+      <DependentUpon>UPF_Search.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
