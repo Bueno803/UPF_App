@@ -27,7 +27,24 @@ namespace UPF_App
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+  
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
         {
             UPF_Search UPF_S = new UPF_Search();
             UPF_S.Show();
