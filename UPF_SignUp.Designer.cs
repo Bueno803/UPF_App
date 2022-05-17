@@ -48,19 +48,20 @@ namespace UPF_App
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.AddToDTBBtn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -161,18 +162,6 @@ namespace UPF_App
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            resources.GetString("listBox1.Items"),
-            resources.GetString("listBox1.Items1"),
-            resources.GetString("listBox1.Items2"),
-            resources.GetString("listBox1.Items3"),
-            resources.GetString("listBox1.Items4")});
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.Name = "listBox1";
-            // 
             // textBox11
             // 
             this.textBox11.ForeColor = System.Drawing.SystemColors.ScrollBar;
@@ -183,71 +172,6 @@ namespace UPF_App
             // 
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Items.AddRange(new object[] {
-            resources.GetString("listBox2.Items"),
-            resources.GetString("listBox2.Items1"),
-            resources.GetString("listBox2.Items2"),
-            resources.GetString("listBox2.Items3"),
-            resources.GetString("listBox2.Items4"),
-            resources.GetString("listBox2.Items5"),
-            resources.GetString("listBox2.Items6"),
-            resources.GetString("listBox2.Items7"),
-            resources.GetString("listBox2.Items8"),
-            resources.GetString("listBox2.Items9"),
-            resources.GetString("listBox2.Items10"),
-            resources.GetString("listBox2.Items11")});
-            resources.ApplyResources(this.listBox2, "listBox2");
-            this.listBox2.Name = "listBox2";
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Items.AddRange(new object[] {
-            resources.GetString("listBox3.Items"),
-            resources.GetString("listBox3.Items1"),
-            resources.GetString("listBox3.Items2"),
-            resources.GetString("listBox3.Items3"),
-            resources.GetString("listBox3.Items4"),
-            resources.GetString("listBox3.Items5"),
-            resources.GetString("listBox3.Items6"),
-            resources.GetString("listBox3.Items7"),
-            resources.GetString("listBox3.Items8"),
-            resources.GetString("listBox3.Items9"),
-            resources.GetString("listBox3.Items10"),
-            resources.GetString("listBox3.Items11"),
-            resources.GetString("listBox3.Items12"),
-            resources.GetString("listBox3.Items13"),
-            resources.GetString("listBox3.Items14"),
-            resources.GetString("listBox3.Items15"),
-            resources.GetString("listBox3.Items16"),
-            resources.GetString("listBox3.Items17"),
-            resources.GetString("listBox3.Items18"),
-            resources.GetString("listBox3.Items19"),
-            resources.GetString("listBox3.Items20"),
-            resources.GetString("listBox3.Items21"),
-            resources.GetString("listBox3.Items22"),
-            resources.GetString("listBox3.Items23"),
-            resources.GetString("listBox3.Items24"),
-            resources.GetString("listBox3.Items25"),
-            resources.GetString("listBox3.Items26"),
-            resources.GetString("listBox3.Items27"),
-            resources.GetString("listBox3.Items28"),
-            resources.GetString("listBox3.Items29"),
-            resources.GetString("listBox3.Items30")});
-            resources.ApplyResources(this.listBox3, "listBox3");
-            this.listBox3.Name = "listBox3";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -260,6 +184,16 @@ namespace UPF_App
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.BackColor = System.Drawing.Color.Firebrick;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.ForeColor = System.Drawing.SystemColors.Control;
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // SearchBtn
             // 
@@ -292,6 +226,75 @@ namespace UPF_App
             this.AddToDTBBtn.UseVisualStyleBackColor = true;
             this.AddToDTBBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2"),
+            resources.GetString("comboBox1.Items3"),
+            resources.GetString("comboBox1.Items4")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            resources.GetString("comboBox2.Items"),
+            resources.GetString("comboBox2.Items1"),
+            resources.GetString("comboBox2.Items2"),
+            resources.GetString("comboBox2.Items3"),
+            resources.GetString("comboBox2.Items4"),
+            resources.GetString("comboBox2.Items5"),
+            resources.GetString("comboBox2.Items6"),
+            resources.GetString("comboBox2.Items7"),
+            resources.GetString("comboBox2.Items8"),
+            resources.GetString("comboBox2.Items9"),
+            resources.GetString("comboBox2.Items10"),
+            resources.GetString("comboBox2.Items11")});
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.Name = "comboBox2";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            resources.GetString("comboBox3.Items"),
+            resources.GetString("comboBox3.Items1"),
+            resources.GetString("comboBox3.Items2"),
+            resources.GetString("comboBox3.Items3"),
+            resources.GetString("comboBox3.Items4"),
+            resources.GetString("comboBox3.Items5"),
+            resources.GetString("comboBox3.Items6"),
+            resources.GetString("comboBox3.Items7"),
+            resources.GetString("comboBox3.Items8"),
+            resources.GetString("comboBox3.Items9"),
+            resources.GetString("comboBox3.Items10"),
+            resources.GetString("comboBox3.Items11"),
+            resources.GetString("comboBox3.Items12"),
+            resources.GetString("comboBox3.Items13"),
+            resources.GetString("comboBox3.Items14"),
+            resources.GetString("comboBox3.Items15"),
+            resources.GetString("comboBox3.Items16"),
+            resources.GetString("comboBox3.Items17"),
+            resources.GetString("comboBox3.Items18"),
+            resources.GetString("comboBox3.Items19"),
+            resources.GetString("comboBox3.Items20"),
+            resources.GetString("comboBox3.Items21"),
+            resources.GetString("comboBox3.Items22"),
+            resources.GetString("comboBox3.Items23"),
+            resources.GetString("comboBox3.Items24"),
+            resources.GetString("comboBox3.Items25"),
+            resources.GetString("comboBox3.Items26"),
+            resources.GetString("comboBox3.Items27"),
+            resources.GetString("comboBox3.Items28"),
+            resources.GetString("comboBox3.Items29"),
+            resources.GetString("comboBox3.Items30")});
+            resources.ApplyResources(this.comboBox3, "comboBox3");
+            this.comboBox3.Name = "comboBox3";
+            // 
             // button3
             // 
             resources.ApplyResources(this.button3, "button3");
@@ -301,28 +304,34 @@ namespace UPF_App
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
-            // button4
+            // label11
             // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.SearchBtn_Click);
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            resources.GetString("comboBox4.Items"),
+            resources.GetString("comboBox4.Items1")});
+            resources.ApplyResources(this.comboBox4, "comboBox4");
+            this.comboBox4.Name = "comboBox4";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(75)))), ((int)(((byte)(150)))));
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
@@ -370,19 +379,20 @@ namespace UPF_App
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button AddToDTBBtn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }
 
