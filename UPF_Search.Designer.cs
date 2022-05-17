@@ -33,12 +33,12 @@ namespace UPF_App
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.AddToDTBBtn = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -91,8 +91,24 @@ namespace UPF_App
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 662);
+            this.panel1.Size = new System.Drawing.Size(190, 701);
             this.panel1.TabIndex = 28;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(0, 278);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 56);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Search By Phone Number";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -104,7 +120,7 @@ namespace UPF_App
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button4.Location = new System.Drawing.Point(-1, 607);
+            this.button4.Location = new System.Drawing.Point(-1, 646);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(190, 56);
             this.button4.TabIndex = 1;
@@ -122,7 +138,7 @@ namespace UPF_App
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(-2, 549);
+            this.button3.Location = new System.Drawing.Point(-2, 568);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(190, 56);
             this.button3.TabIndex = 1;
@@ -174,22 +190,6 @@ namespace UPF_App
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(0, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 56);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Search By Phone Number";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -271,7 +271,7 @@ namespace UPF_App
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(75)))), ((int)(((byte)(150)))));
-            this.ClientSize = new System.Drawing.Size(1115, 662);
+            this.ClientSize = new System.Drawing.Size(1131, 701);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
@@ -285,6 +285,7 @@ namespace UPF_App
             this.Controls.Add(this.button2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UPF_Search";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

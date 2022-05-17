@@ -663,6 +663,90 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;AddToDTBBtn.Name" xml:space="preserve">
+    <value>AddToDTBBtn</value>
+  </data>
+  <data name="&gt;&gt;AddToDTBBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AddToDTBBtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;AddToDTBBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;SearchBtn.Name" xml:space="preserve">
+    <value>SearchBtn</value>
+  </data>
+  <data name="&gt;&gt;SearchBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SearchBtn.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;SearchBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 701</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="button4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -681,7 +765,7 @@
         5opjCfcLt8UtW/IDswWOK15XbKVy5s891QuDy/bMtNJltjLOBFNE0DDIsUqKLF2y2qK4RGU/XMbf4vsj
         4jLEtYopjlHSWOi+H/UHv7t1E329haRgGKqfPO+tHWq24CvveZ+Hnvd1BJWPcGEX/ekDGHwXPV/U2vah
         YQPOLouasQ3nm9D8kNEd3ZcqZQYSCXg9kW+ag6ZrqFso9Pazz/EdxKSrySvY3YOOpGQvlnl3bWlvf57x
-        +yP8DfRNctszxNlbAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH5gUREBEuv6VgGgAABKhJREFU
+        +yP8DfRNctszxNlbAAAACXBIWXMAAA7CAAAOwgEVKEqAAAAAB3RJTUUH5gUREBEuv6VgGgAABKhJREFU
         aEPtl0lInVcUx21rFmkzlNLQbrpJu3CTbJJNNqULcZ7nEUWlzlrFhRFRUdE4i2NUrANSKygiaBUHcACV
         5/RwKqhonHDGMc56+j+Xq6S0TVIovpfy/eDjvfd9937c3733nXOujoKCgoKCgoLChwsRfSK//r8YHBx8
         WllZaSh/vhf29vYPcN2VP7UPY2PjhyEhIf15eXkHxcXFdvL2W7Gzs/sWUn24anHdl7e1B0tLSz0XFxdV
@@ -747,7 +831,7 @@
   <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC4AAAAvCAYAAACc5fiSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAABpNJREFUaEPVmFuIVVUYgLdNpqVYEPgSRW9CPSQ9hD6ERG9FEBRUUFEIQUQXRRJC
+        DgAACw4BQL7hQQAABpNJREFUaEPVmFuIVVUYgLdNpqVYEPgSRW9CPSQ9hD6ERG9FEBRUUFEIQUQXRRJC
         KiEIespKA5UplB586KEbhULvFYaapSEGOo4z6twv6sxop+/brH+fM6d9zsyZGfS44GetvfZ/+da//r3X
         PierVCo3pJRO3ghSDK5evVqI1yMjI1lPT082NDSUDQ4OZufPn88uXLjgeAn3Hh0fH984MTGx7eLFi530
         H3O9Ad11AwMDHX19fdm5c+cyxll/f39upz162eTkZN7PR2YNLoAgQKwYGxtbf/ny5X1TU1N/oTt8hUY/
@@ -820,7 +904,7 @@
   <data name="AddToDTBBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC4AAAAvCAYAAACc5fiSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAABpNJREFUaEPVmFuIVVUYgLdNpqVYEPgSRW9CPSQ9hD6ERG9FEBRUUFEIQUQXRRJC
+        DwAACw8BkvkDpQAABpNJREFUaEPVmFuIVVUYgLdNpqVYEPgSRW9CPSQ9hD6ERG9FEBRUUFEIQUQXRRJC
         KiEIespKA5UplB586KEbhULvFYaapSEGOo4z6twv6sxop+/brH+fM6d9zsyZGfS44GetvfZ/+da//r3X
         PierVCo3pJRO3ghSDK5evVqI1yMjI1lPT082NDSUDQ4OZufPn88uXLjgeAn3Hh0fH984MTGx7eLFi530
         H3O9Ad11AwMDHX19fdm5c+cyxll/f39upz162eTkZN7PR2YNLoAgQKwYGxtbf/ny5X1TU1N/oTt8hUY/
@@ -899,7 +983,7 @@
         5opjCfcLt8UtW/IDswWOK15XbKVy5s891QuDy/bMtNJltjLOBFNE0DDIsUqKLF2y2qK4RGU/XMbf4vsj
         4jLEtYopjlHSWOi+H/UHv7t1E329haRgGKqfPO+tHWq24CvveZ+Hnvd1BJWPcGEX/ekDGHwXPV/U2vah
         YQPOLouasQ3nm9D8kNEd3ZcqZQYSCXg9kW+ag6ZrqFso9Pazz/EdxKSrySvY3YOOpGQvlnl3bWlvf57x
-        +yP8DfRNctszxNlbAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH5gUREAMux1EQyQAAAM1JREFU
+        +yP8DfRNctszxNlbAAAACXBIWXMAAA7CAAAOwgEVKEqAAAAAB3RJTUUH5gUREAMux1EQyQAAAM1JREFU
         aEPt1cEJg0AQhWFrsScLsQG9WYJoFRbg2TY8W4D3iWMmEMLEeFEz8n/wQNiFnceCmwAAANxHlmXixZbj
         0hJlWUrXdWvqur5PMS30Mo4jxf4axaKhWDThii0zpm3byq98K1ZVlbv/PXbU+XTAPM+lKIrNDMNgtUSm
         aXL3fObSW9XD9QaOQLEj6OF936/ltjLPs4375O35zOXF9sT7eeyJHXOuZcbUPjfpgLxjkVAsGopFQ7Fo
@@ -939,7 +1023,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA8AAAAJDCAYAAADEhX1ZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAA1xtJREFUeF7s3Qd0FFe6Nup/3XXumXv+OTNOROXOOStL5JxzEEGBnAwYnHPOCQew
+        EAAACxABrSO9dQAA1xtJREFUeF7s3Qd0FFe6Nup/3XXumXv+OTNOROXOOStL5JxzEEGBnAwYnHPOCQew
         jSMGbAxKSIAQQsgiDh6nsWec7YEZ7AHbmAFMEJLeu3dJwoLZNggXtJDfb62H7v7UajXqqq5+Vbt2/R8A
         RERERERERC2esklERERERETU0iibRERERERERC2NsklERERERETU0iibRERERERERC2NsklERERERETU
         0iibRERERERERC2NsklERERERETU0iibRERERERERC2NsklERERERETU0iibRERERERERC2NsklERERE
@@ -1884,30 +1968,6 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 701</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2216,6 +2276,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1131, 701</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Form1</value>
