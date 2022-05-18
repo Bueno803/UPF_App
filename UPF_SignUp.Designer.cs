@@ -50,12 +50,12 @@ namespace UPF_App
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.AddToDTBBtn = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.AddToDTBBtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -75,6 +75,7 @@ namespace UPF_App
             // 
             resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -183,6 +184,24 @@ namespace UPF_App
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
+            // AddToDTBBtn
+            // 
+            resources.ApplyResources(this.AddToDTBBtn, "AddToDTBBtn");
+            this.AddToDTBBtn.FlatAppearance.BorderSize = 0;
+            this.AddToDTBBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.AddToDTBBtn.Name = "AddToDTBBtn";
+            this.AddToDTBBtn.UseVisualStyleBackColor = true;
+            this.AddToDTBBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
             // SearchBtn
             // 
             resources.ApplyResources(this.SearchBtn, "SearchBtn");
@@ -205,15 +224,6 @@ namespace UPF_App
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.Name = "label10";
             // 
-            // AddToDTBBtn
-            // 
-            resources.ApplyResources(this.AddToDTBBtn, "AddToDTBBtn");
-            this.AddToDTBBtn.FlatAppearance.BorderSize = 0;
-            this.AddToDTBBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddToDTBBtn.Name = "AddToDTBBtn";
-            this.AddToDTBBtn.UseVisualStyleBackColor = true;
-            this.AddToDTBBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -224,15 +234,6 @@ namespace UPF_App
             resources.GetString("comboBox1.Items3")});
             resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
-            // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // label11
             // 
