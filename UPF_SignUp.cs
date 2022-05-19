@@ -19,7 +19,7 @@ namespace UPF_App
     public partial class Form1 : Form
     {
         //private string sqlConnectionString = @"Data Source = localhost;initial catalog=upf databases;user id=rooty;password=password";
-        private string sqlConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+        private string sqlConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=upf_app;";
 
         /* This part is to stop the window from flickering whenver clicking on components.
            In order to stop the window from flickering, import the following code inside the object and
@@ -72,7 +72,7 @@ namespace UPF_App
 
         }
 
-        private void SearchBtn_Click(object sender, EventArgs e)
+        private void AddBtn_Click(object sender, EventArgs e)
         {
             int ZipCode = Int32.Parse(textBox10.Text);
             InsertClient(new Client_Space()
@@ -93,18 +93,21 @@ namespace UPF_App
                 SignUpDate = dateTimePicker1.Text
             });
 
+            MessageBox.Show("Successfully added to database!");
+
         }
 
-        private void AddToDTBBtn_Click(object sender, EventArgs e)
+        private void SearchBtn_Click(object sender, EventArgs e)
         {
             SendMessage(this.Handle, WM_SETREDRAW, false, 0);
 
             UPF_Search UPF_S = new UPF_Search();
             UPF_S.Show();
-            Visible = false;
 
             SendMessage(this.Handle, WM_SETREDRAW, true, 0);
             this.Refresh();
+            Hide();
+
         }
 
 
@@ -128,26 +131,41 @@ namespace UPF_App
                                                                                        " ClientType, Location, SignUpDate) values (@FirstName, @MiddleName, @LastName, @PhoneNumber, @HomeNumber, @Email, @StreetAddress, @State, @City, @PostalCode, @Gender," +
                                                                                        " @ClientType, @Location, @SignUpDate)", new
                                                                                        {
-                                                                                           FirstName = client.FirstName,
-                                                                                           MiddleName = client.MiddleName,
-                                                                                           LastName = client.LastName,
-                                                                                           PhoneNumber = client.PhoneNumber
+                                                                                           client.FirstName,
+                                                                                           client.MiddleName,
+                                                                                           client.LastName,
+                                                                                           client.PhoneNumber
                                                                                        ,
-                                                                                           HomeNumber = client.HomeNumber,
-                                                                                           Email = client.Email,
-                                                                                           StreetAddress = client.StreetAddress,
-                                                                                           State = client.State,
-                                                                                           City = client.City,
-                                                                                           PostalCode = client.PostalCode
+                                                                                           client.HomeNumber,
+                                                                                           client.Email,
+                                                                                           client.StreetAddress,
+                                                                                           client.State,
+                                                                                           client.City,
+                                                                                           client.PostalCode
                                                                                        ,
-                                                                                           Gender = client.Gender,
-                                                                                           ClientType = client.ClientType,
-                                                                                           Location = client.Location,
-                                                                                           SignUpDate = client.SignUpDate
+                                                                                           client.Gender,
+                                                                                           client.ClientType,
+                                                                                           client.Location,
+                                                                                           client.SignUpDate
                                                                                        });
                 connection.Close();
                 return affectedRows;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         //This method update client record in database    

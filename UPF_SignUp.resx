@@ -760,16 +760,16 @@
   <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="AddToDTBBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="SearchBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="AddToDTBBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="SearchBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="AddToDTBBtn.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="SearchBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Nirmala UI, 9.75pt, style=Bold</value>
   </data>
-  <data name="AddToDTBBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SearchBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC4AAAAvCAYAAACc5fiSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DwAACw8BkvkDpQAABpNJREFUaEPVmFuIVVUYgLdNpqVYEPgSRW9CPSQ9hD6ERG9FEBRUUFEIQUQXRRJC
@@ -803,46 +803,46 @@
         jf5GcDemgd9oUjrZ/lLJ/gPjjYSgfK66NgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="AddToDTBBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="SearchBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="AddToDTBBtn.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="SearchBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 222</value>
   </data>
-  <data name="AddToDTBBtn.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="SearchBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 56</value>
   </data>
-  <data name="AddToDTBBtn.TabIndex" type="System.Int32, mscorlib">
+  <data name="SearchBtn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="AddToDTBBtn.Text" xml:space="preserve">
+  <data name="SearchBtn.Text" xml:space="preserve">
     <value>Search</value>
   </data>
-  <data name="AddToDTBBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="SearchBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>TextBeforeImage</value>
   </data>
-  <data name="&gt;&gt;AddToDTBBtn.Name" xml:space="preserve">
-    <value>AddToDTBBtn</value>
+  <data name="&gt;&gt;SearchBtn.Name" xml:space="preserve">
+    <value>SearchBtn</value>
   </data>
-  <data name="&gt;&gt;AddToDTBBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;SearchBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AddToDTBBtn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;SearchBtn.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;AddToDTBBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;SearchBtn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="SearchBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="AddBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="SearchBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="AddBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="SearchBtn.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AddBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Nirmala UI, 9.75pt, style=Bold</value>
   </data>
-  <data name="SearchBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AddBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADYAAAAuCAYAAABjwOorAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKM+VkTlI
         A0EYhT+jokhExBQiFluolYIXop1EUQSFECN4Fe5uTBSym7CbYGMp2AYsPBqvwsZaWwtbQRA8QCytrBRt
@@ -858,31 +858,31 @@
         tIQXW46raRrxstj1wAMAAOAiSfIAgxkdaLzGIOEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="SearchBtn.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AddBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 166</value>
   </data>
-  <data name="SearchBtn.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AddBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 56</value>
   </data>
-  <data name="SearchBtn.TabIndex" type="System.Int32, mscorlib">
+  <data name="AddBtn.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="SearchBtn.Text" xml:space="preserve">
+  <data name="AddBtn.Text" xml:space="preserve">
     <value>Add</value>
   </data>
-  <data name="SearchBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+  <data name="AddBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>TextBeforeImage</value>
   </data>
-  <data name="&gt;&gt;SearchBtn.Name" xml:space="preserve">
-    <value>SearchBtn</value>
+  <data name="&gt;&gt;AddBtn.Name" xml:space="preserve">
+    <value>AddBtn</value>
   </data>
-  <data name="&gt;&gt;SearchBtn.Type" xml:space="preserve">
+  <data name="&gt;&gt;AddBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SearchBtn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AddBtn.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;SearchBtn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AddBtn.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">

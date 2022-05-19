@@ -51,8 +51,8 @@ namespace UPF_App
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.AddToDTBBtn = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -151,6 +151,7 @@ namespace UPF_App
             this.textBox10.ForeColor = System.Drawing.SystemColors.ScrollBar;
             resources.ApplyResources(this.textBox10, "textBox10");
             this.textBox10.Name = "textBox10";
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label8
             // 
@@ -167,8 +168,8 @@ namespace UPF_App
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(144)))));
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.AddToDTBBtn);
             this.panel1.Controls.Add(this.SearchBtn);
+            this.panel1.Controls.Add(this.AddBtn);
             this.panel1.Controls.Add(this.pictureBox1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
@@ -182,7 +183,7 @@ namespace UPF_App
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
-           // this.button4.Click += new System.EventHandler(this.SearchBtn_Click);
+            this.button4.Click += new System.EventHandler(this.exit_Click);
             // 
             // button3
             // 
@@ -191,16 +192,7 @@ namespace UPF_App
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = true;
-           // this.button3.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
-            // AddToDTBBtn
-            // 
-            resources.ApplyResources(this.AddToDTBBtn, "AddToDTBBtn");
-            this.AddToDTBBtn.FlatAppearance.BorderSize = 0;
-            this.AddToDTBBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddToDTBBtn.Name = "AddToDTBBtn";
-            this.AddToDTBBtn.UseVisualStyleBackColor = true;
-            this.AddToDTBBtn.Click += new System.EventHandler(this.AddToDTBBtn_Click);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // SearchBtn
             // 
@@ -210,6 +202,15 @@ namespace UPF_App
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.UseVisualStyleBackColor = true;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
+            // AddBtn
+            // 
+            resources.ApplyResources(this.AddBtn, "AddBtn");
+            this.AddBtn.FlatAppearance.BorderSize = 0;
+            this.AddBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // pictureBox1
             // 
@@ -382,9 +383,9 @@ namespace UPF_App
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button AddToDTBBtn;
+        private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label11;
