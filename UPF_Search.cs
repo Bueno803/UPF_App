@@ -74,13 +74,23 @@ namespace UPF_App
         {
             //int rowIndex = dataGridView1.CurrentCell.RowIndex;
             // dataGridView1.Rows.RemoveAt(rowIndex);
+            
             if (dataGridView1.CurrentRow == null)
             {
                 MessageBox.Show("Please select a row to delete!");
                 return;
+            } 
+            else
+            {
+                DialogResult d;
+                d = MessageBox.Show("Are you sure you want to delete Client Id: " + dataGridView1.CurrentRow.Cells["ClientID"].Value + " Client Information?", "Delete Prompt", MessageBoxButtons.YesNo);
+                if(d==DialogResult.Yes)
+                {
+                    int clientID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ClientID"].Value);
+                    DeleteClients(new Client_Space() { ClientID = clientID });
+                }
             }
-            int clientID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ClientID"].Value);
-            DeleteClients(new Client_Space() { ClientID = clientID });
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

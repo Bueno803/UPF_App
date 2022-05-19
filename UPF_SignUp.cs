@@ -74,26 +74,27 @@ namespace UPF_App
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            int ZipCode = Int32.Parse(textBox10.Text);
+            int ZipCode = Int32.Parse(ZipTxt.Text);
             InsertClient(new Client_Space()
             {
-                FirstName = textBox1.Text,
-                MiddleName = textBox2.Text,
-                LastName = textBox3.Text,
-                PhoneNumber = textBox4.Text,
-                HomeNumber = textBox5.Text,
-                Email = textBox6.Text,
-                StreetAddress = textBox7.Text,
-                State = comboBox5.Text,
-                City = textBox8.Text,
+
+                FirstName = FirstNameTxt.Text,
+                MiddleName = MiddleNameTxt.Text,
+                LastName = LastNameTxt.Text,
+                PhoneNumber = PhoneNumTxt.Text,
+                HomeNumber = HomeNumTxt.Text,
+                Email = EmailTxt.Text,
+                StreetAddress = StAddressTxt.Text,
+                State = StateComboBx.Text,
+                City = CityTxt.Text,
                 PostalCode = ZipCode,
-                Gender = comboBox4.Text,
-                ClientType = comboBox1.Text,
-                Location = textBox12.Text,
+                Gender = GenderComboBx.Text,
+                ClientType = ClientComboBx.Text,
+                Location = LocationTxt.Text,
                 SignUpDate = dateTimePicker1.Text
             });
 
-            MessageBox.Show("Successfully added to database!");
+            MessageBox.Show("Successfully added to database!", "Add Prompt");
 
         }
 

@@ -153,46 +153,46 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="FirstNameTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 202</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="FirstNameTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="FirstNameTxt.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;FirstNameTxt.Name" xml:space="preserve">
+    <value>FirstNameTxt</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;FirstNameTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;FirstNameTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;FirstNameTxt.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiddleNameTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 244</value>
   </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MiddleNameTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="MiddleNameTxt.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
+  <data name="&gt;&gt;MiddleNameTxt.Name" xml:space="preserve">
+    <value>MiddleNameTxt</value>
   </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+  <data name="&gt;&gt;MiddleNameTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MiddleNameTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiddleNameTxt.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
@@ -228,25 +228,25 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="LastNameTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 284</value>
   </data>
-  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LastNameTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="LastNameTxt.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
-    <value>textBox3</value>
+  <data name="&gt;&gt;LastNameTxt.Name" xml:space="preserve">
+    <value>LastNameTxt</value>
   </data>
-  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;LastNameTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LastNameTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LastNameTxt.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
@@ -282,25 +282,25 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
-  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PhoneNumTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 378</value>
   </data>
-  <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PhoneNumTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox4.TabIndex" type="System.Int32, mscorlib">
+  <data name="PhoneNumTxt.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;textBox4.Name" xml:space="preserve">
-    <value>textBox4</value>
+  <data name="&gt;&gt;PhoneNumTxt.Name" xml:space="preserve">
+    <value>PhoneNumTxt</value>
   </data>
-  <data name="&gt;&gt;textBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;PhoneNumTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PhoneNumTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PhoneNumTxt.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -336,25 +336,25 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
-  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="HomeNumTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 418</value>
   </data>
-  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HomeNumTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
+  <data name="HomeNumTxt.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
-    <value>textBox5</value>
+  <data name="&gt;&gt;HomeNumTxt.Name" xml:space="preserve">
+    <value>HomeNumTxt</value>
   </data>
-  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
+  <data name="&gt;&gt;HomeNumTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;HomeNumTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;HomeNumTxt.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
@@ -390,25 +390,25 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="textBox6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="EmailTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 502</value>
   </data>
-  <data name="textBox6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="EmailTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox6.TabIndex" type="System.Int32, mscorlib">
+  <data name="EmailTxt.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;textBox6.Name" xml:space="preserve">
-    <value>textBox6</value>
+  <data name="&gt;&gt;EmailTxt.Name" xml:space="preserve">
+    <value>EmailTxt</value>
   </data>
-  <data name="&gt;&gt;textBox6.Type" xml:space="preserve">
+  <data name="&gt;&gt;EmailTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;EmailTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;EmailTxt.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
@@ -444,28 +444,28 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="StAddressTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>440, 204</value>
   </data>
-  <data name="textBox7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="StAddressTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox7.TabIndex" type="System.Int32, mscorlib">
+  <data name="StAddressTxt.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="textBox7.Text" xml:space="preserve">
+  <data name="StAddressTxt.Text" xml:space="preserve">
     <value>street address</value>
   </data>
-  <data name="&gt;&gt;textBox7.Name" xml:space="preserve">
-    <value>textBox7</value>
+  <data name="&gt;&gt;StAddressTxt.Name" xml:space="preserve">
+    <value>StAddressTxt</value>
   </data>
-  <data name="&gt;&gt;textBox7.Type" xml:space="preserve">
+  <data name="&gt;&gt;StAddressTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;StAddressTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;StAddressTxt.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
@@ -501,52 +501,52 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="textBox8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="CityTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>440, 258</value>
   </data>
-  <data name="textBox8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CityTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox8.TabIndex" type="System.Int32, mscorlib">
+  <data name="CityTxt.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="textBox8.Text" xml:space="preserve">
+  <data name="CityTxt.Text" xml:space="preserve">
     <value>City</value>
   </data>
-  <data name="&gt;&gt;textBox8.Name" xml:space="preserve">
-    <value>textBox8</value>
+  <data name="&gt;&gt;CityTxt.Name" xml:space="preserve">
+    <value>CityTxt</value>
   </data>
-  <data name="&gt;&gt;textBox8.Type" xml:space="preserve">
+  <data name="&gt;&gt;CityTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CityTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CityTxt.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="textBox10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ZipTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>440, 284</value>
   </data>
-  <data name="textBox10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ZipTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox10.TabIndex" type="System.Int32, mscorlib">
+  <data name="ZipTxt.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="textBox10.Text" xml:space="preserve">
+  <data name="ZipTxt.Text" xml:space="preserve">
     <value>Postal Code</value>
   </data>
-  <data name="&gt;&gt;textBox10.Name" xml:space="preserve">
-    <value>textBox10</value>
+  <data name="&gt;&gt;ZipTxt.Name" xml:space="preserve">
+    <value>ZipTxt</value>
   </data>
-  <data name="&gt;&gt;textBox10.Type" xml:space="preserve">
+  <data name="&gt;&gt;ZipTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ZipTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox10.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ZipTxt.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
@@ -1893,37 +1893,37 @@
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="comboBox1.Items" xml:space="preserve">
+  <data name="ClientComboBx.Items" xml:space="preserve">
     <value>TKD/HKD Class</value>
   </data>
-  <data name="comboBox1.Items1" xml:space="preserve">
+  <data name="ClientComboBx.Items1" xml:space="preserve">
     <value>TKD/HKD Private Lesson</value>
   </data>
-  <data name="comboBox1.Items2" xml:space="preserve">
+  <data name="ClientComboBx.Items2" xml:space="preserve">
     <value>Personal Training 1on1</value>
   </data>
-  <data name="comboBox1.Items3" xml:space="preserve">
+  <data name="ClientComboBx.Items3" xml:space="preserve">
     <value>Fitness Group Class</value>
   </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ClientComboBx.Location" type="System.Drawing.Point, System.Drawing">
     <value>849, 204</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ClientComboBx.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 21</value>
   </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="ClientComboBx.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
+  <data name="&gt;&gt;ClientComboBx.Name" xml:space="preserve">
+    <value>ClientComboBx</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;ClientComboBx.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ClientComboBx.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ClientComboBx.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
@@ -1959,31 +1959,31 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="comboBox4.Items" xml:space="preserve">
+  <data name="GenderComboBx.Items" xml:space="preserve">
     <value>Male</value>
   </data>
-  <data name="comboBox4.Items1" xml:space="preserve">
+  <data name="GenderComboBx.Items1" xml:space="preserve">
     <value>Female</value>
   </data>
-  <data name="comboBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GenderComboBx.Location" type="System.Drawing.Point, System.Drawing">
     <value>440, 378</value>
   </data>
-  <data name="comboBox4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="GenderComboBx.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 21</value>
   </data>
-  <data name="comboBox4.TabIndex" type="System.Int32, mscorlib">
+  <data name="GenderComboBx.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="&gt;&gt;comboBox4.Name" xml:space="preserve">
-    <value>comboBox4</value>
+  <data name="&gt;&gt;GenderComboBx.Name" xml:space="preserve">
+    <value>GenderComboBx</value>
   </data>
-  <data name="&gt;&gt;comboBox4.Type" xml:space="preserve">
+  <data name="&gt;&gt;GenderComboBx.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GenderComboBx.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GenderComboBx.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
@@ -2019,187 +2019,187 @@
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="textBox12.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="LocationTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>849, 261</value>
   </data>
-  <data name="textBox12.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LocationTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
   </data>
-  <data name="textBox12.TabIndex" type="System.Int32, mscorlib">
+  <data name="LocationTxt.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="&gt;&gt;textBox12.Name" xml:space="preserve">
-    <value>textBox12</value>
+  <data name="&gt;&gt;LocationTxt.Name" xml:space="preserve">
+    <value>LocationTxt</value>
   </data>
-  <data name="&gt;&gt;textBox12.Type" xml:space="preserve">
+  <data name="&gt;&gt;LocationTxt.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox12.Parent" xml:space="preserve">
+  <data name="&gt;&gt;LocationTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox12.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LocationTxt.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="comboBox5.Items" xml:space="preserve">
+  <data name="StateComboBx.Items" xml:space="preserve">
     <value>Alabama</value>
   </data>
-  <data name="comboBox5.Items1" xml:space="preserve">
+  <data name="StateComboBx.Items1" xml:space="preserve">
     <value>Alaska</value>
   </data>
-  <data name="comboBox5.Items2" xml:space="preserve">
+  <data name="StateComboBx.Items2" xml:space="preserve">
     <value>Arizona</value>
   </data>
-  <data name="comboBox5.Items3" xml:space="preserve">
+  <data name="StateComboBx.Items3" xml:space="preserve">
     <value>Arkansas</value>
   </data>
-  <data name="comboBox5.Items4" xml:space="preserve">
+  <data name="StateComboBx.Items4" xml:space="preserve">
     <value>California</value>
   </data>
-  <data name="comboBox5.Items5" xml:space="preserve">
+  <data name="StateComboBx.Items5" xml:space="preserve">
     <value>Colorado</value>
   </data>
-  <data name="comboBox5.Items6" xml:space="preserve">
+  <data name="StateComboBx.Items6" xml:space="preserve">
     <value>Connecticut</value>
   </data>
-  <data name="comboBox5.Items7" xml:space="preserve">
+  <data name="StateComboBx.Items7" xml:space="preserve">
     <value>Delaware</value>
   </data>
-  <data name="comboBox5.Items8" xml:space="preserve">
+  <data name="StateComboBx.Items8" xml:space="preserve">
     <value>Florida</value>
   </data>
-  <data name="comboBox5.Items9" xml:space="preserve">
+  <data name="StateComboBx.Items9" xml:space="preserve">
     <value>Georgia</value>
   </data>
-  <data name="comboBox5.Items10" xml:space="preserve">
+  <data name="StateComboBx.Items10" xml:space="preserve">
     <value>Hawaii</value>
   </data>
-  <data name="comboBox5.Items11" xml:space="preserve">
+  <data name="StateComboBx.Items11" xml:space="preserve">
     <value>Idaho</value>
   </data>
-  <data name="comboBox5.Items12" xml:space="preserve">
+  <data name="StateComboBx.Items12" xml:space="preserve">
     <value>IllinoisIndiana</value>
   </data>
-  <data name="comboBox5.Items13" xml:space="preserve">
+  <data name="StateComboBx.Items13" xml:space="preserve">
     <value>Iowa</value>
   </data>
-  <data name="comboBox5.Items14" xml:space="preserve">
+  <data name="StateComboBx.Items14" xml:space="preserve">
     <value>Kansas</value>
   </data>
-  <data name="comboBox5.Items15" xml:space="preserve">
+  <data name="StateComboBx.Items15" xml:space="preserve">
     <value>Kentucky</value>
   </data>
-  <data name="comboBox5.Items16" xml:space="preserve">
+  <data name="StateComboBx.Items16" xml:space="preserve">
     <value>Louisiana</value>
   </data>
-  <data name="comboBox5.Items17" xml:space="preserve">
+  <data name="StateComboBx.Items17" xml:space="preserve">
     <value>Maine</value>
   </data>
-  <data name="comboBox5.Items18" xml:space="preserve">
+  <data name="StateComboBx.Items18" xml:space="preserve">
     <value>Maryland</value>
   </data>
-  <data name="comboBox5.Items19" xml:space="preserve">
+  <data name="StateComboBx.Items19" xml:space="preserve">
     <value>Massachusetts</value>
   </data>
-  <data name="comboBox5.Items20" xml:space="preserve">
+  <data name="StateComboBx.Items20" xml:space="preserve">
     <value>Michigan</value>
   </data>
-  <data name="comboBox5.Items21" xml:space="preserve">
+  <data name="StateComboBx.Items21" xml:space="preserve">
     <value>Minnesota</value>
   </data>
-  <data name="comboBox5.Items22" xml:space="preserve">
+  <data name="StateComboBx.Items22" xml:space="preserve">
     <value>Mississippi</value>
   </data>
-  <data name="comboBox5.Items23" xml:space="preserve">
+  <data name="StateComboBx.Items23" xml:space="preserve">
     <value>Missouri</value>
   </data>
-  <data name="comboBox5.Items24" xml:space="preserve">
+  <data name="StateComboBx.Items24" xml:space="preserve">
     <value>MontanaNebraska</value>
   </data>
-  <data name="comboBox5.Items25" xml:space="preserve">
+  <data name="StateComboBx.Items25" xml:space="preserve">
     <value>Nevada</value>
   </data>
-  <data name="comboBox5.Items26" xml:space="preserve">
+  <data name="StateComboBx.Items26" xml:space="preserve">
     <value>New Hampshire</value>
   </data>
-  <data name="comboBox5.Items27" xml:space="preserve">
+  <data name="StateComboBx.Items27" xml:space="preserve">
     <value>New Jersey</value>
   </data>
-  <data name="comboBox5.Items28" xml:space="preserve">
+  <data name="StateComboBx.Items28" xml:space="preserve">
     <value>New Mexico</value>
   </data>
-  <data name="comboBox5.Items29" xml:space="preserve">
+  <data name="StateComboBx.Items29" xml:space="preserve">
     <value>New York</value>
   </data>
-  <data name="comboBox5.Items30" xml:space="preserve">
+  <data name="StateComboBx.Items30" xml:space="preserve">
     <value>North Carolina</value>
   </data>
-  <data name="comboBox5.Items31" xml:space="preserve">
+  <data name="StateComboBx.Items31" xml:space="preserve">
     <value>North Dakota</value>
   </data>
-  <data name="comboBox5.Items32" xml:space="preserve">
+  <data name="StateComboBx.Items32" xml:space="preserve">
     <value>Ohio</value>
   </data>
-  <data name="comboBox5.Items33" xml:space="preserve">
+  <data name="StateComboBx.Items33" xml:space="preserve">
     <value>Oklahoma</value>
   </data>
-  <data name="comboBox5.Items34" xml:space="preserve">
+  <data name="StateComboBx.Items34" xml:space="preserve">
     <value>Oregon</value>
   </data>
-  <data name="comboBox5.Items35" xml:space="preserve">
+  <data name="StateComboBx.Items35" xml:space="preserve">
     <value>PennsylvaniaRhode Island</value>
   </data>
-  <data name="comboBox5.Items36" xml:space="preserve">
+  <data name="StateComboBx.Items36" xml:space="preserve">
     <value>South Carolina</value>
   </data>
-  <data name="comboBox5.Items37" xml:space="preserve">
+  <data name="StateComboBx.Items37" xml:space="preserve">
     <value>South Dakota</value>
   </data>
-  <data name="comboBox5.Items38" xml:space="preserve">
+  <data name="StateComboBx.Items38" xml:space="preserve">
     <value>Tennessee</value>
   </data>
-  <data name="comboBox5.Items39" xml:space="preserve">
+  <data name="StateComboBx.Items39" xml:space="preserve">
     <value>Texas</value>
   </data>
-  <data name="comboBox5.Items40" xml:space="preserve">
+  <data name="StateComboBx.Items40" xml:space="preserve">
     <value>Utah</value>
   </data>
-  <data name="comboBox5.Items41" xml:space="preserve">
+  <data name="StateComboBx.Items41" xml:space="preserve">
     <value>Vermont</value>
   </data>
-  <data name="comboBox5.Items42" xml:space="preserve">
+  <data name="StateComboBx.Items42" xml:space="preserve">
     <value>Virginia</value>
   </data>
-  <data name="comboBox5.Items43" xml:space="preserve">
+  <data name="StateComboBx.Items43" xml:space="preserve">
     <value>Washington</value>
   </data>
-  <data name="comboBox5.Items44" xml:space="preserve">
+  <data name="StateComboBx.Items44" xml:space="preserve">
     <value>West Virginia</value>
   </data>
-  <data name="comboBox5.Items45" xml:space="preserve">
+  <data name="StateComboBx.Items45" xml:space="preserve">
     <value>Wisconsin</value>
   </data>
-  <data name="comboBox5.Items46" xml:space="preserve">
+  <data name="StateComboBx.Items46" xml:space="preserve">
     <value>Wyoming</value>
   </data>
-  <data name="comboBox5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="StateComboBx.Location" type="System.Drawing.Point, System.Drawing">
     <value>440, 231</value>
   </data>
-  <data name="comboBox5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="StateComboBx.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 21</value>
   </data>
-  <data name="comboBox5.TabIndex" type="System.Int32, mscorlib">
+  <data name="StateComboBx.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="&gt;&gt;comboBox5.Name" xml:space="preserve">
-    <value>comboBox5</value>
+  <data name="&gt;&gt;StateComboBx.Name" xml:space="preserve">
+    <value>StateComboBx</value>
   </data>
-  <data name="&gt;&gt;comboBox5.Type" xml:space="preserve">
+  <data name="&gt;&gt;StateComboBx.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;StateComboBx.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboBox5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;StateComboBx.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
