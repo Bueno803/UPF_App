@@ -18,7 +18,7 @@ namespace UPF_App
 {
     public partial class UPF_Search : Form
     {
-        private string sqlConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=test;";
+        private string sqlConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=upf_app;";
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, Int32 wMsg, bool wParam, Int32 lParam);
@@ -33,16 +33,16 @@ namespace UPF_App
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BackToAdd_Click(object sender, EventArgs e)
         {
             SendMessage(this.Handle, WM_SETREDRAW, false, 0);
 
             Form1 UPF_SU = new Form1();
             UPF_SU.Show();
-            Visible = false;
+            //Visible = false;
 
             SendMessage(this.Handle, WM_SETREDRAW, true, 0);
-            this.Refresh();
+            this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -50,31 +50,35 @@ namespace UPF_App
 
         }
         //Search by First Name
-        private void SearchBtn_Click(object sender, EventArgs e)
+        private void SearchByFNBtn_Click(object sender, EventArgs e)
         {
             GetClientByFirstName(textBox1.Text);
         }
         //Search by Last Name
-        private void AddToDTBBtn_Click(object sender, EventArgs e)
+        private void SearchByLNBtn_Click(object sender, EventArgs e)
         {
             GetClientByLasttName(textBox3.Text);
         }
         // Search by phone number
-        private void button1_Click(object sender, EventArgs e)
+        private void SearchByPN_Click(object sender, EventArgs e)
         {
             GetClientByPhoneNumber(textBox4.Text);
         }
         // Search by location
-        private void button5_Click(object sender, EventArgs e)
+        private void SearchByL_Click(object sender, EventArgs e)
         {
             GetClientByLocation(textBox2.Text);
         }
         // Delete row
-        private void button4_Click(object sender, EventArgs e)
+        private void DeleteBtn_Click(object sender, EventArgs e)
         {
             //int rowIndex = dataGridView1.CurrentCell.RowIndex;
             // dataGridView1.Rows.RemoveAt(rowIndex);
-            if (dataGridView1.CurrentRow == null) return;
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Please select a row to delete!");
+                return;
+            }
             int clientID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ClientID"].Value);
             DeleteClients(new Client_Space() { ClientID = clientID });
         }
@@ -90,7 +94,7 @@ namespace UPF_App
             using (var connection = new MySqlConnection(sqlConnectionString))
             {
                 connection.Open();
-                clients = connection.Query<Client_Space>("Select ClientID, FirstName MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
+                clients = connection.Query<Client_Space>("Select ClientID, FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
                                                                                        " ClientType, Location, SignUpDate from Client_Space where FirstName ='"+firstName+"'").ToList();
                 dataGridView1.DataSource = clients;
                 connection.Close();
@@ -147,7 +151,9 @@ namespace UPF_App
             {
                 connection.Open();
                 var affectedRows = connection.Execute("Delete from Client_Space Where ClientID = @ClientID", new { ClientID = client.ClientID });
+                this.Refresh();
                 connection.Close();
+                MessageBox.Show("Delete Successful!");
                 return affectedRows;
             }
         }
