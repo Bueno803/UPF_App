@@ -182,7 +182,7 @@ namespace UPF_App
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.SearchBtn_Click);
+           // this.button4.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // button3
             // 
@@ -191,7 +191,7 @@ namespace UPF_App
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.SearchBtn_Click);
+           // this.button3.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // AddToDTBBtn
             // 
@@ -200,7 +200,7 @@ namespace UPF_App
             this.AddToDTBBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.AddToDTBBtn.Name = "AddToDTBBtn";
             this.AddToDTBBtn.UseVisualStyleBackColor = true;
-            this.AddToDTBBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            this.AddToDTBBtn.Click += new System.EventHandler(this.AddToDTBBtn_Click);
             // 
             // SearchBtn
             // 
