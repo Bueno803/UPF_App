@@ -118,18 +118,6 @@ namespace UPF_App
 
         }
 
-        private List<Client_Space> GetAllClientst()
-        {
-            List<Client_Space> students = new List<Client_Space>();
-            using (var connection = new MySqlConnection(sqlConnectionString))
-            {
-                connection.Open();
-                students = connection.Query<Client_Space>("Select Id, Name, Marks from Client_Space").ToList();
-                connection.Close();
-            }
-            return students;
-        }
-
         //This method inserts a student record in database    
         private int InsertClient(Client_Space client)
         {
@@ -162,25 +150,13 @@ namespace UPF_App
             }
         }
 
-        //This method update student record in database    
+        //This method update client record in database    
         //private int UpdateClients(Client_Space client)
         //{
         //    using (var connection = new SqlConnection(sqlConnectionString))
         //    {
         //        connection.Open();
         //        var affectedRows = connection.Execute("Update Client_Information set Name = @Name, Marks = @Marks Where Id = @Id", new { Id = studentId, Name = txtName.Text, Marks = txtMarks.Text });
-        //        connection.Close();
-        //        return affectedRows;
-        //    }
-        //}
-
-        ////This method deletes a student record from database    
-        //private int DeleteClients(Client_Space client)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(sqlConnectionString))
-        //    {
-        //        connection.Open();
-        //        var affectedRows = connection.Execute("Delete from Client_Information Where Id = @Id", new { First_Name = studentId });
         //        connection.Close();
         //        return affectedRows;
         //    }
