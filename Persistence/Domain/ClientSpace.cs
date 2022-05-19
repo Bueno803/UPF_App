@@ -22,7 +22,7 @@ namespace UPF_App.Persistence.Domain
 		public String Gender { get; set; }
 		public String ClientType { get; set; }
 		public String Location { get; set; }
-		public String TransactionDate { get; set; }
+		public String SignUpDate { get; set; }
 
 		public Client_Space()
 		{
