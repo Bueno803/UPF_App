@@ -75,6 +75,7 @@ namespace UPF_App
         private void AddBtn_Click(object sender, EventArgs e)
         {
             int ZipCode = Int32.Parse(textBox10.Text);
+            DateTime SignUpDate = DateTime.Parse(dateTimePicker1.Text);
             InsertClient(new Client_Space()
             {
                 FirstName = textBox1.Text,
@@ -90,7 +91,7 @@ namespace UPF_App
                 Gender = comboBox4.Text,
                 ClientType = comboBox1.Text,
                 Location = textBox12.Text,
-                SignUpDate = dateTimePicker1.Text
+                SignUpDate = SignUpDate
             });
 
             MessageBox.Show("Successfully added to database!");
