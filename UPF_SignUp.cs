@@ -75,6 +75,7 @@ namespace UPF_App
         private void AddBtn_Click(object sender, EventArgs e)
         {
             int ZipCode = Int32.Parse(ZipTxt.Text);
+            DateTime SignUpDate = DateTime.Parse(dateTimePicker1.Text);
             InsertClient(new Client_Space()
             {
 
@@ -91,7 +92,7 @@ namespace UPF_App
                 Gender = GenderComboBx.Text,
                 ClientType = ClientComboBx.Text,
                 Location = LocationTxt.Text,
-                SignUpDate = dateTimePicker1.Text
+                SignUpDate = SignUpDate
             });
 
             MessageBox.Show("Successfully added to database!", "Add Prompt");
