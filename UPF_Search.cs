@@ -23,6 +23,7 @@ namespace UPF_App
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, Int32 wMsg, bool wParam, Int32 lParam);
         private const int WM_SETREDRAW = 11;
+        private string lastQuery;
         public UPF_Search()
         {
             InitializeComponent();
@@ -52,22 +53,22 @@ namespace UPF_App
         //Search by First Name
         private void SearchByFNBtn_Click(object sender, EventArgs e)
         {
-            GetClientByFirstName(textBox1.Text);
+            GetClients(textBox1.Text, "FirstName");
         }
         //Search by Last Name
         private void SearchByLNBtn_Click(object sender, EventArgs e)
         {
-            GetClientByLasttName(textBox3.Text);
+            GetClients(textBox3.Text, "LastName");
         }
         // Search by phone number
         private void SearchByPN_Click(object sender, EventArgs e)
         {
-            GetClientByPhoneNumber(textBox4.Text);
+            GetClients(textBox4.Text, "PhoneNumber");
         }
         // Search by location
         private void SearchByL_Click(object sender, EventArgs e)
         {
-            GetClientByLocation(textBox2.Text);
+            GetClients(textBox2.Text, "Location");
         }
         // Delete row
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -87,7 +88,7 @@ namespace UPF_App
                 if(d==DialogResult.Yes)
                 {
                     int clientID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ClientID"].Value);
-                    DeleteClients(new Client_Space() { ClientID = clientID });
+                    DeleteClient(new Client_Space() { ClientID = clientID });
                 }
             }
             
@@ -98,74 +99,45 @@ namespace UPF_App
 
         }
 
-        private List<Client_Space> GetClientByFirstName(string firstName)
-        {
-            List<Client_Space> clients = new List<Client_Space>();
-            using (var connection = new MySqlConnection(sqlConnectionString))
-            {
-                connection.Open();
-                clients = connection.Query<Client_Space>("Select ClientID, FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
-                                                                                       " ClientType, Location, SignUpDate from Client_Space where FirstName ='"+firstName+"'").ToList();
-                dataGridView1.DataSource = clients;
-                connection.Close();
-            }
-            return clients;
-        }
-
-        private List<Client_Space> GetClientByLasttName(string lastName)
-        {
-            List<Client_Space> clients = new List<Client_Space>();
-            using (var connection = new MySqlConnection(sqlConnectionString))
-            {
-                connection.Open();
-                clients = connection.Query<Client_Space>("Select ClientID, FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
-                                                         " ClientType, Location, SignUpDate from Client_Space where LastName ='" + lastName + "'").ToList();
-                dataGridView1.DataSource = clients;
-                connection.Close();
-            }
-            return clients;
-        }
-
-        private List<Client_Space> GetClientByPhoneNumber(string phoneNumber)
-        {
-            List<Client_Space> clients = new List<Client_Space>();
-            using (var connection = new MySqlConnection(sqlConnectionString))
-            {
-                connection.Open();
-                clients = connection.Query<Client_Space>("Select ClientID, FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
-                                                         " ClientType, Location, SignUpDate from Client_Space where PhoneNumber ='" + phoneNumber + "'").ToList();
-                dataGridView1.DataSource = clients;
-                connection.Close();
-            }
-            return clients;
-        }
-
-        private List<Client_Space> GetClientByLocation(string location)
-        {
-            List<Client_Space> clients = new List<Client_Space>();
-            using (var connection = new MySqlConnection(sqlConnectionString))
-            {
-                connection.Open();
-                clients = connection.Query<Client_Space>("Select ClientID, FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
-                                                         " ClientType, Location, SignUpDate from Client_Space where Location ='" + location + "'").ToList();
-                dataGridView1.DataSource = clients;
-                connection.Close();
-            }
-            return clients;
-        }
-
         //This method deletes a client record from database    
-        private int DeleteClients(Client_Space client)
+        private int DeleteClient(Client_Space client)
         {
             using (var connection = new MySqlConnection(sqlConnectionString))
             {
                 connection.Open();
                 var affectedRows = connection.Execute("Delete from Client_Space Where ClientID = @ClientID", new { ClientID = client.ClientID });
-                this.Refresh();
+                GetLastClients();
                 connection.Close();
                 MessageBox.Show("Delete Successful!");
                 return affectedRows;
             }
+        }
+
+        private List<Client_Space> GetClients(string query, string colunm)
+        {
+            lastQuery =
+                "Select ClientID, FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
+                " ClientType, Location, SignUpDate from Client_Space where "+colunm+" ='" + query + "'";
+            List<Client_Space> clients = new List<Client_Space>();
+            using (var connection = new MySqlConnection(sqlConnectionString))
+            {
+                connection.Open();
+                clients = connection.Query<Client_Space>(lastQuery).ToList();
+                dataGridView1.DataSource = clients;
+                connection.Close();
+            }
+            return clients;
+        }
+
+        private List<Client_Space> GetLastClients()
+        {
+            List<Client_Space> clients = new List<Client_Space>();
+            using (var connection = new MySqlConnection(sqlConnectionString))
+            {
+                clients = connection.Query<Client_Space>(lastQuery).ToList();
+                dataGridView1.DataSource = clients;
+            }
+            return clients;
         }
     }
 }
