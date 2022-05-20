@@ -106,7 +106,7 @@ namespace UPF_App
             this.SearchByL.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.SearchByL.ForeColor = System.Drawing.SystemColors.Control;
             this.SearchByL.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.SearchByL.Location = new System.Drawing.Point(0, 334);
+            this.SearchByL.Location = new System.Drawing.Point(0, 333);
             this.SearchByL.Name = "SearchByL";
             this.SearchByL.Size = new System.Drawing.Size(190, 56);
             this.SearchByL.TabIndex = 3;
@@ -123,7 +123,7 @@ namespace UPF_App
             this.SearchByPN.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.SearchByPN.ForeColor = System.Drawing.SystemColors.Control;
             this.SearchByPN.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.SearchByPN.Location = new System.Drawing.Point(0, 278);
+            this.SearchByPN.Location = new System.Drawing.Point(0, 277);
             this.SearchByPN.Name = "SearchByPN";
             this.SearchByPN.Size = new System.Drawing.Size(190, 56);
             this.SearchByPN.TabIndex = 2;
@@ -178,7 +178,7 @@ namespace UPF_App
             this.SearchByLNBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.SearchByLNBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.SearchByLNBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.SearchByLNBtn.Location = new System.Drawing.Point(0, 222);
+            this.SearchByLNBtn.Location = new System.Drawing.Point(0, 221);
             this.SearchByLNBtn.Name = "SearchByLNBtn";
             this.SearchByLNBtn.Size = new System.Drawing.Size(190, 56);
             this.SearchByLNBtn.TabIndex = 1;
@@ -195,7 +195,7 @@ namespace UPF_App
             this.SearchByFNBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.SearchByFNBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.SearchByFNBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.SearchByFNBtn.Location = new System.Drawing.Point(0, 166);
+            this.SearchByFNBtn.Location = new System.Drawing.Point(0, 165);
             this.SearchByFNBtn.Name = "SearchByFNBtn";
             this.SearchByFNBtn.Size = new System.Drawing.Size(190, 56);
             this.SearchByFNBtn.TabIndex = 1;
@@ -211,7 +211,7 @@ namespace UPF_App
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(190, 166);
+            this.pictureBox2.Size = new System.Drawing.Size(190, 165);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -231,7 +231,7 @@ namespace UPF_App
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(498, 9);
+            this.label10.Location = new System.Drawing.Point(496, 34);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(274, 37);
             this.label10.TabIndex = 30;
