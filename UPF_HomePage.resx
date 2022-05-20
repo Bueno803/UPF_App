@@ -1045,10 +1045,10 @@
   <metadata name="bindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="addClientBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="updateBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAACvCAYAAAASTwDpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAFQJJREFUeF7t3XuUFFedB/D8v+fsH+45e9zV3bPH9ejZ9ezZjWGm63VfVV39mAfD
+        DAAACwwBP0AiyAAAFQJJREFUeF7t3XuUFFedB/D8v+fsH+45e9zV3bPH9ejZ9ezZjWGm63VfVV39mAfD
         I2EWEhwIGRISHklgJAEhQCYSQA4T3hAMgciGhA0rmhhPXqLR+EgiGo2iuCiKJkaJWaNxHzkn+6shDT09
         vxnm1a/b3z8+09O/rq66de/93arqrq667J133gGAOqNkuEXJ/E1G52cbbZ6PwvCdUqGJbzQ6fVPgR/dw
         80iwQQCoLYEfPqyVOWq0fryQ4EKos1rpN4uTvlRozNvJI73v+6GJNtNgcTw04WOF+Q5aEADUDkreZyhp
@@ -1144,7 +1144,7 @@
   <data name="srchBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAACvCAYAAAASTwDpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAFQJJREFUeF7t3XuUFFedB/D8v+fsH+45e9zV3bPH9ejZ9ezZjWGm63VfVV39mAfD
+        DAAACwwBP0AiyAAAFQJJREFUeF7t3XuUFFedB/D8v+fsH+45e9zV3bPH9ejZ9ezZjWGm63VfVV39mAfD
         I2EWEhwIGRISHklgJAEhQCYSQA4T3hAMgciGhA0rmhhPXqLR+EgiGo2iuCiKJkaJWaNxHzkn+6shDT09
         vxnm1a/b3z8+09O/rq66de/93arqrq667J133gGAOqNkuEXJ/E1G52cbbZ6PwvCdUqGJbzQ6fVPgR/dw
         80iwQQCoLYEfPqyVOWq0fryQ4EKos1rpN4uTvlRozNvJI73v+6GJNtNgcTw04WOF+Q5aEADUDkreZyhp
@@ -1237,10 +1237,10 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="updateBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="addClientBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAACvCAYAAAASTwDpAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAFQJJREFUeF7t3XuUFFedB/D8v+fsH+45e9zV3bPH9ejZ9ezZjWGm63VfVV39mAfD
+        DAAACwwBP0AiyAAAFQJJREFUeF7t3XuUFFedB/D8v+fsH+45e9zV3bPH9ejZ9ezZjWGm63VfVV39mAfD
         I2EWEhwIGRISHklgJAEhQCYSQA4T3hAMgciGhA0rmhhPXqLR+EgiGo2iuCiKJkaJWaNxHzkn+6shDT09
         vxnm1a/b3z8+09O/rq66de/93arqrq667J133gGAOqNkuEXJ/E1G52cbbZ6PwvCdUqGJbzQ6fVPgR/dw
         80iwQQCoLYEfPqyVOWq0fryQ4EKos1rpN4uTvlRozNvJI73v+6GJNtNgcTw04WOF+Q5aEADUDkreZyhp

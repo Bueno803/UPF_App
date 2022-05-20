@@ -53,6 +53,7 @@ namespace UPF_App
             int nHeightEllipse // height of ellipse
         );
 
+
         public Form1()
         {
             InitializeComponent();
@@ -62,7 +63,19 @@ namespace UPF_App
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        //Drag top bar
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
+
+        private void topPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, 0xf012, 0);
+        }
+
+            private void label7_Click(object sender, EventArgs e)
         {
 
         }
@@ -91,27 +104,15 @@ namespace UPF_App
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            int ZipCode = Int32.Parse(textBox10.Text);
-            DateTime SignUpDate = DateTime.Parse(dateTimePicker1.Text);
-            InsertClient(new Client_Space()
-            {
-                FirstName = textBox1.Text,
-                MiddleName = textBox2.Text,
-                LastName = textBox3.Text,
-                PhoneNumber = textBox4.Text,
-                HomeNumber = textBox5.Text,
-                Email = textBox6.Text,
-                StreetAddress = textBox7.Text,
-                State = comboBox5.Text,
-                City = textBox8.Text,
-                PostalCode = ZipCode,
-                Gender = comboBox4.Text,
-                ClientType = comboBox1.Text,
-                Location = textBox12.Text,
-                SignUpDate = SignUpDate
-            });
+            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
 
-            MessageBox.Show("Successfully added to database!");
+            Form1 UPF_SU = new Form1();
+            UPF_SU.Show();
+            //Visible = false;
+
+            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            this.Refresh();
+            Hide();
 
         }
 
@@ -125,13 +126,6 @@ namespace UPF_App
             SendMessage(this.Handle, WM_SETREDRAW, true, 0);
             this.Refresh();
             Hide();
-
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -184,6 +178,123 @@ namespace UPF_App
         private void textBox10_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BackToHP_Click(object sender, EventArgs e)
+        {
+            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+
+            UPF_HomePage UPF_SU = new UPF_HomePage();
+            UPF_SU.Show();
+            //Visible = false;
+
+            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            this.Hide();
+        }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void topPanel_MouseDown_2(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addClientBtn_Click(object sender, EventArgs e)
+        {
+            int ZipCode = Int32.Parse(txt_ZipAddy.Text);
+            DateTime SignUpDate = DateTime.Parse(dateTimePicker1.Text);
+            InsertClient(new Client_Space()
+            {
+                FirstName = textBox1.Text,
+                MiddleName = textBox2.Text,
+                LastName = textBox3.Text,
+                PhoneNumber = textBox4.Text,
+                HomeNumber = textBox5.Text,
+                Email = textBox6.Text,
+                StreetAddress = txt_StreetAddy.Text,
+                State = comboBox5.Text,
+                City = txt_CityAddy.Text,
+                PostalCode = ZipCode,
+                Gender = comboBox4.Text,
+                ClientType = comboBox1.Text,
+                Location = textBox12.Text,
+                SignUpDate = SignUpDate
+            });
+
+            MessageBox.Show("Successfully added to database!");
+        }
+
+        private void streetAddy_enter(object sender, EventArgs e)
+        {
+            if (txt_StreetAddy.Text == "Street Address")
+            {
+                txt_StreetAddy.ForeColor = Color.Black;
+                txt_StreetAddy.Text = "";
+            }
+
+        }
+        private void streetAddy_leave(object sender, EventArgs e)
+        {
+            if (txt_StreetAddy.Text.Length == 0)
+            {
+                txt_StreetAddy.ForeColor = Color.Black;
+                txt_StreetAddy.Text = "Street Address";
+            }
+
+        }
+        private void cityAddy_enter(object sender, EventArgs e)
+        {
+            if (txt_CityAddy.Text == "City")
+            {
+                txt_CityAddy.ForeColor = Color.Black;
+                txt_CityAddy.Text = "";
+            }
+        }
+
+        private void cityAddy_Leave(object sender, EventArgs e)
+        {
+            if (txt_CityAddy.Text.Length == 0)
+            {
+                txt_CityAddy.ForeColor = Color.Black;
+                txt_CityAddy.Text = "City";
+            }
+        }
+
+        private void zipAddy_enter(object sender, EventArgs e)
+        {
+            if (txt_ZipAddy.Text == "ZIP Code")
+            {
+                txt_ZipAddy.ForeColor = Color.Black;
+                txt_ZipAddy.Text = "";
+            }
+        }
+
+        private void zipAddy_leave(object sender, EventArgs e)
+        {
+            if (txt_ZipAddy.Text.Length == 0)
+            {
+                txt_ZipAddy.ForeColor = Color.Black;
+                txt_ZipAddy.Text = "ZIP Code";
+            }
         }
 
         //This method update client record in database    

@@ -42,14 +42,15 @@ namespace UPF_App
             this.label5 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_StreetAddy = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_CityAddy = new System.Windows.Forms.TextBox();
+            this.txt_ZipAddy = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BackToHP = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
@@ -62,13 +63,18 @@ namespace UPF_App
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.CloseBtn = new System.Windows.Forms.Button();
+            this.addClientBtn = new UPF_App.RoundedButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Name = "label1";
             // 
             // textBox1
@@ -85,7 +91,9 @@ namespace UPF_App
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox3
             // 
@@ -95,6 +103,7 @@ namespace UPF_App
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Name = "label3";
             // 
             // textBox4
@@ -105,6 +114,7 @@ namespace UPF_App
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Name = "label4";
             // 
             // textBox5
@@ -115,6 +125,7 @@ namespace UPF_App
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Name = "label5";
             // 
             // textBox6
@@ -125,48 +136,59 @@ namespace UPF_App
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Name = "label6";
             // 
-            // textBox7
+            // txt_StreetAddy
             // 
-            this.textBox7.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            resources.ApplyResources(this.textBox7, "textBox7");
-            this.textBox7.Name = "textBox7";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            resources.ApplyResources(this.txt_StreetAddy, "txt_StreetAddy");
+            this.txt_StreetAddy.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txt_StreetAddy.Name = "txt_StreetAddy";
+            this.txt_StreetAddy.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txt_StreetAddy.Enter += new System.EventHandler(this.streetAddy_enter);
+            this.txt_StreetAddy.Leave += new System.EventHandler(this.streetAddy_leave);
             // 
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Name = "label7";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox8
+            // txt_CityAddy
             // 
-            this.textBox8.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            resources.ApplyResources(this.textBox8, "textBox8");
-            this.textBox8.Name = "textBox8";
+            resources.ApplyResources(this.txt_CityAddy, "txt_CityAddy");
+            this.txt_CityAddy.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txt_CityAddy.Name = "txt_CityAddy";
+            this.txt_CityAddy.Enter += new System.EventHandler(this.cityAddy_enter);
+            this.txt_CityAddy.Leave += new System.EventHandler(this.cityAddy_Leave);
             // 
-            // textBox10
+            // txt_ZipAddy
             // 
-            this.textBox10.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            resources.ApplyResources(this.textBox10, "textBox10");
-            this.textBox10.Name = "textBox10";
-            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            resources.ApplyResources(this.txt_ZipAddy, "txt_ZipAddy");
+            this.txt_ZipAddy.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txt_ZipAddy.Name = "txt_ZipAddy";
+            this.txt_ZipAddy.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.txt_ZipAddy.Enter += new System.EventHandler(this.zipAddy_enter);
+            this.txt_ZipAddy.Leave += new System.EventHandler(this.zipAddy_leave);
             // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Name = "label8";
             // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Name = "label9";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(144)))));
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.BackToHP);
+            this.panel1.Controls.Add(this.exitBtn);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.SearchBtn);
             this.panel1.Controls.Add(this.AddBtn);
@@ -175,15 +197,24 @@ namespace UPF_App
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button4
+            // BackToHP
             // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.BackColor = System.Drawing.Color.Firebrick;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.exit_Click);
+            resources.ApplyResources(this.BackToHP, "BackToHP");
+            this.BackToHP.FlatAppearance.BorderSize = 0;
+            this.BackToHP.ForeColor = System.Drawing.SystemColors.Control;
+            this.BackToHP.Name = "BackToHP";
+            this.BackToHP.UseVisualStyleBackColor = true;
+            this.BackToHP.Click += new System.EventHandler(this.BackToHP_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.Firebrick;
+            resources.ApplyResources(this.exitBtn, "exitBtn");
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // button3
             // 
@@ -222,11 +253,14 @@ namespace UPF_App
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.Name = "label10";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             resources.GetString("comboBox1.Items"),
@@ -239,6 +273,7 @@ namespace UPF_App
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.SystemColors.Control;
             this.label11.Name = "label11";
             // 
             // comboBox4
@@ -253,6 +288,7 @@ namespace UPF_App
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
             this.label12.Name = "label12";
             // 
             // textBox12
@@ -262,6 +298,8 @@ namespace UPF_App
             // 
             // comboBox5
             // 
+            resources.ApplyResources(this.comboBox5, "comboBox5");
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             resources.GetString("comboBox5.Items"),
@@ -311,7 +349,6 @@ namespace UPF_App
             resources.GetString("comboBox5.Items44"),
             resources.GetString("comboBox5.Items45"),
             resources.GetString("comboBox5.Items46")});
-            resources.ApplyResources(this.comboBox5, "comboBox5");
             this.comboBox5.Name = "comboBox5";
             // 
             // dateTimePicker1
@@ -319,11 +356,47 @@ namespace UPF_App
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Name = "dateTimePicker1";
             // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(32)))), ((int)(((byte)(102)))));
+            this.topPanel.Controls.Add(this.CloseBtn);
+            resources.ApplyResources(this.topPanel, "topPanel");
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
+            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
+            // 
+            // CloseBtn
+            // 
+            resources.ApplyResources(this.CloseBtn, "CloseBtn");
+            this.CloseBtn.FlatAppearance.BorderSize = 0;
+            this.CloseBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.CloseBtn.ForeColor = System.Drawing.Color.Snow;
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            // 
+            // addClientBtn
+            // 
+            this.addClientBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addClientBtn.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            resources.ApplyResources(this.addClientBtn, "addClientBtn");
+            this.addClientBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.addClientBtn.BorderRadius = 25;
+            this.addClientBtn.BorderSize = 0;
+            this.addClientBtn.FlatAppearance.BorderSize = 0;
+            this.addClientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addClientBtn.Name = "addClientBtn";
+            this.addClientBtn.TextColor = System.Drawing.SystemColors.Control;
+            this.addClientBtn.UseVisualStyleBackColor = false;
+            this.addClientBtn.Click += new System.EventHandler(this.addClientBtn_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(75)))), ((int)(((byte)(150)))));
+            this.Controls.Add(this.addClientBtn);
+            this.Controls.Add(this.topPanel);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.textBox12);
@@ -335,9 +408,9 @@ namespace UPF_App
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txt_ZipAddy);
+            this.Controls.Add(this.txt_CityAddy);
+            this.Controls.Add(this.txt_StreetAddy);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label6);
@@ -356,6 +429,7 @@ namespace UPF_App
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,17 +448,17 @@ namespace UPF_App
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_StreetAddy;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_CityAddy;
+        private System.Windows.Forms.TextBox txt_ZipAddy;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button3;
@@ -394,6 +468,10 @@ namespace UPF_App
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button BackToHP;
+        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Button CloseBtn;
+        private RoundedButton addClientBtn;
     }
 }
 

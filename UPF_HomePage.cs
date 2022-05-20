@@ -31,8 +31,6 @@ namespace UPF_App
             int nHeightEllipse // height of ellipse
         );
 
-
-
         public UPF_HomePage()
         {
             InitializeComponent();
@@ -41,6 +39,15 @@ namespace UPF_App
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
+        //Drag top bar
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
+
+
+
+        //Add a client button
         private void addClientBtn_Click(object sender, EventArgs e)
         {
             SendMessage(this.Handle, WM_SETREDRAW, false, 0);
@@ -53,6 +60,8 @@ namespace UPF_App
             this.Refresh();
             Hide();
         }
+
+        //Update client information page button
         private void updateBtn_Click(object sender, EventArgs e)
         {
             //TO DO: Change when update page is made
@@ -64,6 +73,8 @@ namespace UPF_App
             this.Refresh();
             Hide();
         }
+
+        //Search a client page button
         private void srchBtn_Click(object sender, EventArgs e)
         {
             SendMessage(this.Handle, WM_SETREDRAW, false, 0);
@@ -83,6 +94,17 @@ namespace UPF_App
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void topPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, 0xf012, 0);
         }
     }
 }

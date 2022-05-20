@@ -44,6 +44,12 @@ namespace UPF_App
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
+        //Drag top bar
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
+
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -172,6 +178,62 @@ namespace UPF_App
                 MessageBox.Show("Delete Successful!");
                 return affectedRows;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void topPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, 0xf012, 0);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+
+            Form1 UPF_SU = new Form1();
+            UPF_SU.Show();
+            //Visible = false;
+
+            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            this.Refresh();
+            Hide();
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+
+            UPF_Search UPF_S = new UPF_Search();
+            UPF_S.Show();
+
+            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            this.Refresh();
+            Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
