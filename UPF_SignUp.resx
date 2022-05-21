@@ -153,7 +153,7 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="FirstNameTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>283, 193</value>
   </data>
   <data name="FirstNameTxt.Size" type="System.Drawing.Size, System.Drawing">
@@ -171,10 +171,10 @@
   <data name="&gt;&gt;FirstNameTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;FirstNameTxt.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MiddleNameTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>283, 240</value>
   </data>
   <data name="MiddleNameTxt.Size" type="System.Drawing.Size, System.Drawing">
@@ -192,7 +192,7 @@
   <data name="&gt;&gt;MiddleNameTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MiddleNameTxt.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
@@ -283,7 +283,7 @@
     <value>24</value>
   </data>
 
-  <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PhoneNumTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 354</value>
   </data>
   <data name="PhoneNumTxt.Size" type="System.Drawing.Size, System.Drawing">
@@ -301,7 +301,7 @@
   <data name="&gt;&gt;PhoneNumTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PhoneNumTxt.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -2062,10 +2062,10 @@
     <value>Fitness Group Class</value>
   </data>
 
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ClientComboBx.Location" type="System.Drawing.Point, System.Drawing">
     <value>704, 191</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ClientComboBx.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 21</value>
   </data>
   <data name="ClientComboBx.TabIndex" type="System.Int32, mscorlib">
@@ -2080,7 +2080,7 @@
   <data name="&gt;&gt;ClientComboBx.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ClientComboBx.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
@@ -2122,7 +2122,7 @@
   <data name="GenderComboBx.Items1" xml:space="preserve">
     <value>Female</value>
   </data>
-  <data name="comboBox4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GenderComboBx.Location" type="System.Drawing.Point, System.Drawing">
     <value>284, 354</value>
   </data>
   <data name="GenderComboBx.Size" type="System.Drawing.Size, System.Drawing">
@@ -2140,7 +2140,7 @@
   <data name="&gt;&gt;GenderComboBx.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboBox4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GenderComboBx.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
@@ -2176,10 +2176,10 @@
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="textBox12.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="LocationTxt.Location" type="System.Drawing.Point, System.Drawing">
     <value>704, 245</value>
   </data>
-  <data name="textBox12.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LocationTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 20</value>
   </data>
   <data name="LocationTxt.TabIndex" type="System.Int32, mscorlib">
@@ -2194,13 +2194,13 @@
   <data name="&gt;&gt;LocationTxt.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox12.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;LocationTxt.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="comboBox5.AccessibleName" xml:space="preserve">
+  <data name="StateComboBx.AccessibleName" xml:space="preserve">
     <value />
   </data>
-  <data name="comboBox5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="StateComboBx.Font" type="System.Drawing.Font, System.Drawing">
     <value>Nirmala UI, 8pt</value>
   </data>
   <data name="StateComboBx.Items" xml:space="preserve">
@@ -2344,7 +2344,7 @@
   <data name="StateComboBx.Items46" xml:space="preserve">
     <value>Wyoming</value>
   </data>
-  <data name="comboBox5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="StateComboBx.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 223</value>
   </data>
   <data name="StateComboBx.Size" type="System.Drawing.Size, System.Drawing">
@@ -2362,7 +2362,7 @@
   <data name="&gt;&gt;StateComboBx.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboBox5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;StateComboBx.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">

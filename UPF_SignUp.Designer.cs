@@ -83,7 +83,7 @@ namespace UPF_App
             // 
             resources.ApplyResources(this.FirstNameTxt, "FirstNameTxt");
             this.FirstNameTxt.Name = "FirstNameTxt";
-            this.FirstNameTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.FirstNameTxt.TextChanged += new System.EventHandler(this.FirstNameTxt_TextChanged);
             // 
             // MiddleNameTxt
             // 
@@ -267,15 +267,15 @@ namespace UPF_App
             // ClientComboBx
             // 
 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2"),
-            resources.GetString("comboBox1.Items3")});
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.Name = "comboBox1";
+            this.ClientComboBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ClientComboBx.FormattingEnabled = true;
+            this.ClientComboBx.Items.AddRange(new object[] {
+            resources.GetString("ClientComboBx.Items"),
+            resources.GetString("ClientComboBx.Items1"),
+            resources.GetString("ClientComboBx.Items2"),
+            resources.GetString("ClientComboBx.Items3")});
+            resources.ApplyResources(this.ClientComboBx, "ClientComboBx");
+            this.ClientComboBx.Name = "ClientComboBx";
 
             // 
             // label11
@@ -300,65 +300,65 @@ namespace UPF_App
             this.label12.Name = "label12";
             // 
 
-            // textBox12
+            // LocationTxt
             // 
-            resources.ApplyResources(this.textBox12, "textBox12");
-            this.textBox12.Name = "textBox12";
+            resources.ApplyResources(this.LocationTxt, "LocationTxt");
+            this.LocationTxt.Name = "LocationTxt";
             // 
-            // comboBox5
+            // StateComboBx
             // 
-            resources.ApplyResources(this.comboBox5, "comboBox5");
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            resources.GetString("comboBox5.Items"),
-            resources.GetString("comboBox5.Items1"),
-            resources.GetString("comboBox5.Items2"),
-            resources.GetString("comboBox5.Items3"),
-            resources.GetString("comboBox5.Items4"),
-            resources.GetString("comboBox5.Items5"),
-            resources.GetString("comboBox5.Items6"),
-            resources.GetString("comboBox5.Items7"),
-            resources.GetString("comboBox5.Items8"),
-            resources.GetString("comboBox5.Items9"),
-            resources.GetString("comboBox5.Items10"),
-            resources.GetString("comboBox5.Items11"),
-            resources.GetString("comboBox5.Items12"),
-            resources.GetString("comboBox5.Items13"),
-            resources.GetString("comboBox5.Items14"),
-            resources.GetString("comboBox5.Items15"),
-            resources.GetString("comboBox5.Items16"),
-            resources.GetString("comboBox5.Items17"),
-            resources.GetString("comboBox5.Items18"),
-            resources.GetString("comboBox5.Items19"),
-            resources.GetString("comboBox5.Items20"),
-            resources.GetString("comboBox5.Items21"),
-            resources.GetString("comboBox5.Items22"),
-            resources.GetString("comboBox5.Items23"),
-            resources.GetString("comboBox5.Items24"),
-            resources.GetString("comboBox5.Items25"),
-            resources.GetString("comboBox5.Items26"),
-            resources.GetString("comboBox5.Items27"),
-            resources.GetString("comboBox5.Items28"),
-            resources.GetString("comboBox5.Items29"),
-            resources.GetString("comboBox5.Items30"),
-            resources.GetString("comboBox5.Items31"),
-            resources.GetString("comboBox5.Items32"),
-            resources.GetString("comboBox5.Items33"),
-            resources.GetString("comboBox5.Items34"),
-            resources.GetString("comboBox5.Items35"),
-            resources.GetString("comboBox5.Items36"),
-            resources.GetString("comboBox5.Items37"),
-            resources.GetString("comboBox5.Items38"),
-            resources.GetString("comboBox5.Items39"),
-            resources.GetString("comboBox5.Items40"),
-            resources.GetString("comboBox5.Items41"),
-            resources.GetString("comboBox5.Items42"),
-            resources.GetString("comboBox5.Items43"),
-            resources.GetString("comboBox5.Items44"),
-            resources.GetString("comboBox5.Items45"),
-            resources.GetString("comboBox5.Items46")});
-            this.comboBox5.Name = "comboBox5";
+            resources.ApplyResources(this.StateComboBx, "StateComboBx");
+            this.StateComboBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StateComboBx.FormattingEnabled = true;
+            this.StateComboBx.Items.AddRange(new object[] {
+            resources.GetString("StateComboBx.Items"),
+            resources.GetString("StateComboBx.Items1"),
+            resources.GetString("StateComboBx.Items2"),
+            resources.GetString("StateComboBx.Items3"),
+            resources.GetString("StateComboBx.Items4"),
+            resources.GetString("StateComboBx.Items5"),
+            resources.GetString("StateComboBx.Items6"),
+            resources.GetString("StateComboBx.Items7"),
+            resources.GetString("StateComboBx.Items8"),
+            resources.GetString("StateComboBx.Items9"),
+            resources.GetString("StateComboBx.Items10"),
+            resources.GetString("StateComboBx.Items11"),
+            resources.GetString("StateComboBx.Items12"),
+            resources.GetString("StateComboBx.Items13"),
+            resources.GetString("StateComboBx.Items14"),
+            resources.GetString("StateComboBx.Items15"),
+            resources.GetString("StateComboBx.Items16"),
+            resources.GetString("StateComboBx.Items17"),
+            resources.GetString("StateComboBx.Items18"),
+            resources.GetString("StateComboBx.Items19"),
+            resources.GetString("StateComboBx.Items20"),
+            resources.GetString("StateComboBx.Items21"),
+            resources.GetString("StateComboBx.Items22"),
+            resources.GetString("StateComboBx.Items23"),
+            resources.GetString("StateComboBx.Items24"),
+            resources.GetString("StateComboBx.Items25"),
+            resources.GetString("StateComboBx.Items26"),
+            resources.GetString("StateComboBx.Items27"),
+            resources.GetString("StateComboBx.Items28"),
+            resources.GetString("StateComboBx.Items29"),
+            resources.GetString("StateComboBx.Items30"),
+            resources.GetString("StateComboBx.Items31"),
+            resources.GetString("StateComboBx.Items32"),
+            resources.GetString("StateComboBx.Items33"),
+            resources.GetString("StateComboBx.Items34"),
+            resources.GetString("StateComboBx.Items35"),
+            resources.GetString("StateComboBx.Items36"),
+            resources.GetString("StateComboBx.Items37"),
+            resources.GetString("StateComboBx.Items38"),
+            resources.GetString("StateComboBx.Items39"),
+            resources.GetString("StateComboBx.Items40"),
+            resources.GetString("StateComboBx.Items41"),
+            resources.GetString("StateComboBx.Items42"),
+            resources.GetString("StateComboBx.Items43"),
+            resources.GetString("StateComboBx.Items44"),
+            resources.GetString("StateComboBx.Items45"),
+            resources.GetString("StateComboBx.Items46")});
+            this.StateComboBx.Name = "StateComboBx";
 
             // 
             // dateTimePicker1

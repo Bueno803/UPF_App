@@ -37,12 +37,12 @@ namespace UPF_App
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.FirstNameTxt = new System.Windows.Forms.TextBox();
+            this.PhoneNumTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.LastNameTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.MiddleNameTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BackToAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -154,20 +154,20 @@ namespace UPF_App
             this.label1.Text = "First Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // FirstNameTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(243, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 20);
-            this.textBox1.TabIndex = 32;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.FirstNameTxt.Location = new System.Drawing.Point(243, 140);
+            this.FirstNameTxt.Name = "FirstNameTxt";
+            this.FirstNameTxt.Size = new System.Drawing.Size(165, 20);
+            this.FirstNameTxt.TabIndex = 32;
+            this.FirstNameTxt.TextChanged += new System.EventHandler(this.FirstNameTxt_TextChanged);
             // 
-            // textBox4
+            // PhoneNumTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(670, 140);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 20);
-            this.textBox4.TabIndex = 36;
+            this.PhoneNumTxt.Location = new System.Drawing.Point(670, 140);
+            this.PhoneNumTxt.Name = "PhoneNumTxt";
+            this.PhoneNumTxt.Size = new System.Drawing.Size(165, 20);
+            this.PhoneNumTxt.TabIndex = 36;
             // 
             // label4
             // 
@@ -181,12 +181,12 @@ namespace UPF_App
             this.label4.TabIndex = 35;
             this.label4.Text = "Phone Number";
             // 
-            // textBox3
+            // LastNameTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(465, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 20);
-            this.textBox3.TabIndex = 34;
+            this.LastNameTxt.Location = new System.Drawing.Point(465, 140);
+            this.LastNameTxt.Name = "LastNameTxt";
+            this.LastNameTxt.Size = new System.Drawing.Size(165, 20);
+            this.LastNameTxt.TabIndex = 34;
             // 
             // label3
             // 
@@ -200,12 +200,12 @@ namespace UPF_App
             this.label3.TabIndex = 33;
             this.label3.Text = "Last Name";
             // 
-            // textBox2
+            // MiddleNameTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(873, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 20);
-            this.textBox2.TabIndex = 38;
+            this.MiddleNameTxt.Location = new System.Drawing.Point(873, 140);
+            this.MiddleNameTxt.Name = "MiddleNameTxt";
+            this.MiddleNameTxt.Size = new System.Drawing.Size(165, 20);
+            this.MiddleNameTxt.TabIndex = 38;
             // 
             // label2
             // 
@@ -439,13 +439,13 @@ namespace UPF_App
             this.ClientSize = new System.Drawing.Size(1115, 662);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.MiddleNameTxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.PhoneNumTxt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.LastNameTxt);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.FirstNameTxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridView1);
@@ -476,12 +476,12 @@ namespace UPF_App
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox FirstNameTxt;
+        private System.Windows.Forms.TextBox PhoneNumTxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox LastNameTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox MiddleNameTxt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BackToAdd;
         private System.Windows.Forms.Panel panel2;

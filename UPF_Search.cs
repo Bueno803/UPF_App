@@ -70,7 +70,7 @@ namespace UPF_App
             this.Hide();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void FirstNameTxt_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -78,24 +78,24 @@ namespace UPF_App
         StringBuilder stringy(List<TextBox> textBox, int index)
         {
             StringBuilder query = new StringBuilder();
-            if (textBox.ElementAt(index) == textBox1)
+            if (textBox.ElementAt(index) == FirstNameTxt)
             {
-                query.Append("FirstName='").Append(textBox1.Text);
+                query.Append("FirstName='").Append(FirstNameTxt.Text);
             }
 
-            else if (textBox.ElementAt(index) == textBox3)
+            else if (textBox.ElementAt(index) == LastNameTxt)
             {
-                query.Append("LastName='").Append(textBox3.Text);
+                query.Append("LastName='").Append(LastNameTxt.Text);
             }
 
-            else if (textBox.ElementAt(index) == textBox4)
+            else if (textBox.ElementAt(index) == PhoneNumTxt)
             {
-                query.Append("PhoneNumber='").Append(textBox4.Text);
+                query.Append("PhoneNumber='").Append(PhoneNumTxt.Text);
             }
 
-            else if (textBox.ElementAt(index) == textBox2)
+            else if (textBox.ElementAt(index) == MiddleNameTxt)
             {
-                query.Append("Location='").Append(textBox2.Text);
+                query.Append("Location='").Append(MiddleNameTxt.Text);
             }
 
             if (textBox.Last() != textBox.ElementAt(index))
@@ -108,7 +108,7 @@ namespace UPF_App
         private string queryBuilder()
         {
             StringBuilder builder = new StringBuilder();
-            var textBoxCollection = new List<TextBox>() { textBox1, textBox3, textBox4, textBox2 };
+            var textBoxCollection = new List<TextBox>() { FirstNameTxt, LastNameTxt, PhoneNumTxt, MiddleNameTxt };
             textBoxCollection = textBoxCollection.Where(s => !string.IsNullOrWhiteSpace(s.Text)).Distinct().ToList();
 
             for (int i = 0;i < textBoxCollection.Count; i++)
@@ -122,22 +122,22 @@ namespace UPF_App
         //Search by First Name
         private void SearchByFNBtn_Click(object sender, EventArgs e)
         {
-            GetClients(textBox1.Text, "FirstName");
+            GetClients(FirstNameTxt.Text, "FirstName");
         }
         //Search by Last Name
         private void SearchByLNBtn_Click(object sender, EventArgs e)
         {
-            GetClients(textBox3.Text, "LastName");
+            GetClients(LastNameTxt.Text, "LastName");
         }
         // Search by phone number
         private void SearchByPN_Click(object sender, EventArgs e)
         {
-            GetClients(textBox4.Text, "PhoneNumber");
+            GetClients(PhoneNumTxt.Text, "PhoneNumber");
         }
         // Search by location
         private void SearchByL_Click(object sender, EventArgs e)
         {
-            GetClients(textBox2.Text, "Location");
+            GetClients(MiddleNameTxt.Text, "Location");
         }
         // Delete row
         private void DeleteBtn_Click(object sender, EventArgs e)

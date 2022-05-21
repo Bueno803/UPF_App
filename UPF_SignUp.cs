@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using Microsoft.Win32;
-using UPF_App.Persistence.Domain;
-using System.Data.SqlClient;
+﻿using Dapper;
 using MySql.Data.MySqlClient;
-using Dapper;
+using System;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+using UPF_App.Persistence.Domain;
 
 namespace UPF_App
 {
@@ -75,7 +67,7 @@ namespace UPF_App
             SendMessage(Handle, 0x112, 0xf012, 0);
         }
 
-            private void label7_Click(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
@@ -127,7 +119,7 @@ namespace UPF_App
             Hide();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void FirstNameTxt_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -223,19 +215,19 @@ namespace UPF_App
             DateTime SignUpDate = DateTime.Parse(dateTimePicker1.Text);
             InsertClient(new Client_Space()
             {
-                FirstName = textBox1.Text,
-                MiddleName = textBox2.Text,
-                LastName = textBox3.Text,
-                PhoneNumber = textBox4.Text,
-                HomeNumber = textBox5.Text,
-                Email = textBox6.Text,
+                FirstName = FirstNameTxt.Text,
+                MiddleName = MiddleNameTxt.Text,
+                LastName = LastNameTxt.Text,
+                PhoneNumber = PhoneNumTxt.Text,
+                HomeNumber = HomeNumTxt.Text,
+                Email = EmailTxt.Text,
                 StreetAddress = txt_StreetAddy.Text,
-                State = comboBox5.Text,
+                State = StateComboBx.Text,
                 City = txt_CityAddy.Text,
                 PostalCode = ZipCode,
-                Gender = comboBox4.Text,
-                ClientType = comboBox1.Text,
-                Location = textBox12.Text,
+                Gender = GenderComboBx.Text,
+                ClientType = ClientComboBx.Text,
+                Location = LocationTxt.Text,
                 SignUpDate = SignUpDate
             });
 
