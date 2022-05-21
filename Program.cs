@@ -16,7 +16,10 @@ namespace UPF_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            // TO:DO Add when Home page is ready
+            Application.Run(new UPF_HomePage());
+
+            //Application.Run(new Form1()); //Remove when Hompage is ready
         }
     }
 }

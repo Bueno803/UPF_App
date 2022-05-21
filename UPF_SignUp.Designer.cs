@@ -42,14 +42,17 @@ namespace UPF_App
             this.label5 = new System.Windows.Forms.Label();
             this.EmailTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.StAddressTxt = new System.Windows.Forms.TextBox();
+
+            this.txt_StreetAddy = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.CityTxt = new System.Windows.Forms.TextBox();
-            this.ZipTxt = new System.Windows.Forms.TextBox();
+            this.txt_CityAddy = new System.Windows.Forms.TextBox();
+            this.txt_ZipAddy = new System.Windows.Forms.TextBox();
+          
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BackToHP = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
@@ -62,13 +65,18 @@ namespace UPF_App
             this.LocationTxt = new System.Windows.Forms.TextBox();
             this.StateComboBx = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.CloseBtn = new System.Windows.Forms.Button();
+            this.addClientBtn = new UPF_App.RoundedButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Name = "label1";
             // 
             // FirstNameTxt
@@ -85,7 +93,9 @@ namespace UPF_App
             // label2
             // 
             resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // LastNameTxt
             // 
@@ -95,6 +105,7 @@ namespace UPF_App
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Name = "label3";
             // 
             // PhoneNumTxt
@@ -105,6 +116,7 @@ namespace UPF_App
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Name = "label4";
             // 
             // HomeNumTxt
@@ -115,6 +127,7 @@ namespace UPF_App
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Name = "label5";
             // 
             // EmailTxt
@@ -125,48 +138,63 @@ namespace UPF_App
             // label6
             // 
             resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Name = "label6";
             // 
-            // StAddressTxt
+
+            // txt_StreetAddy
             // 
-            this.StAddressTxt.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            resources.ApplyResources(this.StAddressTxt, "StAddressTxt");
-            this.StAddressTxt.Name = "StAddressTxt";
-            this.StAddressTxt.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            resources.ApplyResources(this.txt_StreetAddy, "txt_StreetAddy");
+            this.txt_StreetAddy.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txt_StreetAddy.Name = "txt_StreetAddy";
+            this.txt_StreetAddy.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txt_StreetAddy.Enter += new System.EventHandler(this.streetAddy_enter);
+            this.txt_StreetAddy.Leave += new System.EventHandler(this.streetAddy_leave);
+
             // 
             // label7
             // 
             resources.ApplyResources(this.label7, "label7");
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
             this.label7.Name = "label7";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // CityTxt
+
+            // txt_CityAddy
             // 
-            this.CityTxt.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            resources.ApplyResources(this.CityTxt, "CityTxt");
-            this.CityTxt.Name = "CityTxt";
+            resources.ApplyResources(this.txt_CityAddy, "txt_CityAddy");
+            this.txt_CityAddy.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txt_CityAddy.Name = "txt_CityAddy";
+            this.txt_CityAddy.Enter += new System.EventHandler(this.cityAddy_enter);
+            this.txt_CityAddy.Leave += new System.EventHandler(this.cityAddy_Leave);
             // 
-            // ZipTxt
+            // txt_ZipAddy
             // 
-            this.ZipTxt.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            resources.ApplyResources(this.ZipTxt, "ZipTxt");
-            this.ZipTxt.Name = "ZipTxt";
-            this.ZipTxt.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            resources.ApplyResources(this.txt_ZipAddy, "txt_ZipAddy");
+            this.txt_ZipAddy.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txt_ZipAddy.Name = "txt_ZipAddy";
+            this.txt_ZipAddy.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
+            this.txt_ZipAddy.Enter += new System.EventHandler(this.zipAddy_enter);
+            this.txt_ZipAddy.Leave += new System.EventHandler(this.zipAddy_leave);
+
             // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
             this.label8.Name = "label8";
             // 
             // label9
             // 
             resources.ApplyResources(this.label9, "label9");
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
             this.label9.Name = "label9";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(144)))));
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.BackToHP);
+            this.panel1.Controls.Add(this.exitBtn);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.SearchBtn);
             this.panel1.Controls.Add(this.AddBtn);
@@ -175,15 +203,24 @@ namespace UPF_App
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button4
+            // BackToHP
             // 
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.BackColor = System.Drawing.Color.Firebrick;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.exit_Click);
+            resources.ApplyResources(this.BackToHP, "BackToHP");
+            this.BackToHP.FlatAppearance.BorderSize = 0;
+            this.BackToHP.ForeColor = System.Drawing.SystemColors.Control;
+            this.BackToHP.Name = "BackToHP";
+            this.BackToHP.UseVisualStyleBackColor = true;
+            this.BackToHP.Click += new System.EventHandler(this.BackToHP_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.Firebrick;
+            resources.ApplyResources(this.exitBtn, "exitBtn");
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // button3
             // 
@@ -222,23 +259,29 @@ namespace UPF_App
             // label10
             // 
             resources.ApplyResources(this.label10, "label10");
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.Name = "label10";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // ClientComboBx
             // 
-            this.ClientComboBx.FormattingEnabled = true;
-            this.ClientComboBx.Items.AddRange(new object[] {
-            resources.GetString("ClientComboBx.Items"),
-            resources.GetString("ClientComboBx.Items1"),
-            resources.GetString("ClientComboBx.Items2"),
-            resources.GetString("ClientComboBx.Items3")});
-            resources.ApplyResources(this.ClientComboBx, "ClientComboBx");
-            this.ClientComboBx.Name = "ClientComboBx";
+
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            resources.GetString("comboBox1.Items"),
+            resources.GetString("comboBox1.Items1"),
+            resources.GetString("comboBox1.Items2"),
+            resources.GetString("comboBox1.Items3")});
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+
             // 
             // label11
             // 
             resources.ApplyResources(this.label11, "label11");
+            this.label11.ForeColor = System.Drawing.SystemColors.Control;
             this.label11.Name = "label11";
             // 
             // GenderComboBx
@@ -253,77 +296,117 @@ namespace UPF_App
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
             this.label12.Name = "label12";
             // 
-            // LocationTxt
+
+            // textBox12
             // 
-            resources.ApplyResources(this.LocationTxt, "LocationTxt");
-            this.LocationTxt.Name = "LocationTxt";
+            resources.ApplyResources(this.textBox12, "textBox12");
+            this.textBox12.Name = "textBox12";
             // 
-            // StateComboBx
+            // comboBox5
             // 
-            this.StateComboBx.FormattingEnabled = true;
-            this.StateComboBx.Items.AddRange(new object[] {
-            resources.GetString("StateComboBx.Items"),
-            resources.GetString("StateComboBx.Items1"),
-            resources.GetString("StateComboBx.Items2"),
-            resources.GetString("StateComboBx.Items3"),
-            resources.GetString("StateComboBx.Items4"),
-            resources.GetString("StateComboBx.Items5"),
-            resources.GetString("StateComboBx.Items6"),
-            resources.GetString("StateComboBx.Items7"),
-            resources.GetString("StateComboBx.Items8"),
-            resources.GetString("StateComboBx.Items9"),
-            resources.GetString("StateComboBx.Items10"),
-            resources.GetString("StateComboBx.Items11"),
-            resources.GetString("StateComboBx.Items12"),
-            resources.GetString("StateComboBx.Items13"),
-            resources.GetString("StateComboBx.Items14"),
-            resources.GetString("StateComboBx.Items15"),
-            resources.GetString("StateComboBx.Items16"),
-            resources.GetString("StateComboBx.Items17"),
-            resources.GetString("StateComboBx.Items18"),
-            resources.GetString("StateComboBx.Items19"),
-            resources.GetString("StateComboBx.Items20"),
-            resources.GetString("StateComboBx.Items21"),
-            resources.GetString("StateComboBx.Items22"),
-            resources.GetString("StateComboBx.Items23"),
-            resources.GetString("StateComboBx.Items24"),
-            resources.GetString("StateComboBx.Items25"),
-            resources.GetString("StateComboBx.Items26"),
-            resources.GetString("StateComboBx.Items27"),
-            resources.GetString("StateComboBx.Items28"),
-            resources.GetString("StateComboBx.Items29"),
-            resources.GetString("StateComboBx.Items30"),
-            resources.GetString("StateComboBx.Items31"),
-            resources.GetString("StateComboBx.Items32"),
-            resources.GetString("StateComboBx.Items33"),
-            resources.GetString("StateComboBx.Items34"),
-            resources.GetString("StateComboBx.Items35"),
-            resources.GetString("StateComboBx.Items36"),
-            resources.GetString("StateComboBx.Items37"),
-            resources.GetString("StateComboBx.Items38"),
-            resources.GetString("StateComboBx.Items39"),
-            resources.GetString("StateComboBx.Items40"),
-            resources.GetString("StateComboBx.Items41"),
-            resources.GetString("StateComboBx.Items42"),
-            resources.GetString("StateComboBx.Items43"),
-            resources.GetString("StateComboBx.Items44"),
-            resources.GetString("StateComboBx.Items45"),
-            resources.GetString("StateComboBx.Items46")});
-            resources.ApplyResources(this.StateComboBx, "StateComboBx");
-            this.StateComboBx.Name = "StateComboBx";
+            resources.ApplyResources(this.comboBox5, "comboBox5");
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            resources.GetString("comboBox5.Items"),
+            resources.GetString("comboBox5.Items1"),
+            resources.GetString("comboBox5.Items2"),
+            resources.GetString("comboBox5.Items3"),
+            resources.GetString("comboBox5.Items4"),
+            resources.GetString("comboBox5.Items5"),
+            resources.GetString("comboBox5.Items6"),
+            resources.GetString("comboBox5.Items7"),
+            resources.GetString("comboBox5.Items8"),
+            resources.GetString("comboBox5.Items9"),
+            resources.GetString("comboBox5.Items10"),
+            resources.GetString("comboBox5.Items11"),
+            resources.GetString("comboBox5.Items12"),
+            resources.GetString("comboBox5.Items13"),
+            resources.GetString("comboBox5.Items14"),
+            resources.GetString("comboBox5.Items15"),
+            resources.GetString("comboBox5.Items16"),
+            resources.GetString("comboBox5.Items17"),
+            resources.GetString("comboBox5.Items18"),
+            resources.GetString("comboBox5.Items19"),
+            resources.GetString("comboBox5.Items20"),
+            resources.GetString("comboBox5.Items21"),
+            resources.GetString("comboBox5.Items22"),
+            resources.GetString("comboBox5.Items23"),
+            resources.GetString("comboBox5.Items24"),
+            resources.GetString("comboBox5.Items25"),
+            resources.GetString("comboBox5.Items26"),
+            resources.GetString("comboBox5.Items27"),
+            resources.GetString("comboBox5.Items28"),
+            resources.GetString("comboBox5.Items29"),
+            resources.GetString("comboBox5.Items30"),
+            resources.GetString("comboBox5.Items31"),
+            resources.GetString("comboBox5.Items32"),
+            resources.GetString("comboBox5.Items33"),
+            resources.GetString("comboBox5.Items34"),
+            resources.GetString("comboBox5.Items35"),
+            resources.GetString("comboBox5.Items36"),
+            resources.GetString("comboBox5.Items37"),
+            resources.GetString("comboBox5.Items38"),
+            resources.GetString("comboBox5.Items39"),
+            resources.GetString("comboBox5.Items40"),
+            resources.GetString("comboBox5.Items41"),
+            resources.GetString("comboBox5.Items42"),
+            resources.GetString("comboBox5.Items43"),
+            resources.GetString("comboBox5.Items44"),
+            resources.GetString("comboBox5.Items45"),
+            resources.GetString("comboBox5.Items46")});
+            this.comboBox5.Name = "comboBox5";
+
             // 
             // dateTimePicker1
             // 
             resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
             this.dateTimePicker1.Name = "dateTimePicker1";
             // 
+            // topPanel
+            // 
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(32)))), ((int)(((byte)(102)))));
+            this.topPanel.Controls.Add(this.CloseBtn);
+            resources.ApplyResources(this.topPanel, "topPanel");
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
+            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
+            // 
+            // CloseBtn
+            // 
+            resources.ApplyResources(this.CloseBtn, "CloseBtn");
+            this.CloseBtn.FlatAppearance.BorderSize = 0;
+            this.CloseBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.CloseBtn.ForeColor = System.Drawing.Color.Snow;
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            // 
+            // addClientBtn
+            // 
+            this.addClientBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addClientBtn.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            resources.ApplyResources(this.addClientBtn, "addClientBtn");
+            this.addClientBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.addClientBtn.BorderRadius = 25;
+            this.addClientBtn.BorderSize = 0;
+            this.addClientBtn.FlatAppearance.BorderSize = 0;
+            this.addClientBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.addClientBtn.Name = "addClientBtn";
+            this.addClientBtn.TextColor = System.Drawing.SystemColors.Control;
+            this.addClientBtn.UseVisualStyleBackColor = false;
+            this.addClientBtn.Click += new System.EventHandler(this.addClientBtn_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(75)))), ((int)(((byte)(150)))));
+            this.Controls.Add(this.addClientBtn);
+            this.Controls.Add(this.topPanel);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.StateComboBx);
             this.Controls.Add(this.LocationTxt);
@@ -335,9 +418,11 @@ namespace UPF_App
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.ZipTxt);
-            this.Controls.Add(this.CityTxt);
-            this.Controls.Add(this.StAddressTxt);
+
+            this.Controls.Add(this.txt_ZipAddy);
+            this.Controls.Add(this.txt_CityAddy);
+            this.Controls.Add(this.txt_StreetAddy);
+
             this.Controls.Add(this.label7);
             this.Controls.Add(this.EmailTxt);
             this.Controls.Add(this.label6);
@@ -356,6 +441,7 @@ namespace UPF_App
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,17 +460,19 @@ namespace UPF_App
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox EmailTxt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox StAddressTxt;
+
+        private System.Windows.Forms.TextBox txt_StreetAddy;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox CityTxt;
-        private System.Windows.Forms.TextBox ZipTxt;
+        private System.Windows.Forms.TextBox txt_CityAddy;
+        private System.Windows.Forms.TextBox txt_ZipAddy;
+
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button AddBtn;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.ComboBox ClientComboBx;
         private System.Windows.Forms.Button button3;
@@ -394,6 +482,10 @@ namespace UPF_App
         private System.Windows.Forms.TextBox LocationTxt;
         private System.Windows.Forms.ComboBox StateComboBx;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button BackToHP;
+        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Button CloseBtn;
+        private RoundedButton addClientBtn;
     }
 }
 
