@@ -113,7 +113,6 @@ namespace UPF_App
             SendMessage(this.Handle, WM_SETREDRAW, true, 0);
             this.Refresh();
             Hide();
-
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
