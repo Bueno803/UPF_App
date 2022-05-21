@@ -50,6 +50,51 @@ namespace UPF_App
         {
 
         }
+
+        StringBuilder stringy(List<TextBox> textBox, int index)
+        {
+            StringBuilder query = new StringBuilder();
+            if (textBox.ElementAt(index) == textBox1)
+            {
+                query.Append("FirstName='").Append(textBox1.Text);
+            }
+
+            else if (textBox.ElementAt(index) == textBox3)
+            {
+                query.Append("LastName='").Append(textBox3.Text);
+            }
+
+            else if (textBox.ElementAt(index) == textBox4)
+            {
+                query.Append("PhoneNumber='").Append(textBox4.Text);
+            }
+
+            else if (textBox.ElementAt(index) == textBox2)
+            {
+                query.Append("Location='").Append(textBox2.Text);
+            }
+
+            if (textBox.Last() != textBox.ElementAt(index))
+                query.Append("' and ");
+
+            return query;
+
+        }
+
+        private string queryBuilder()
+        {
+            StringBuilder builder = new StringBuilder();
+            var textBoxCollection = new List<TextBox>() { textBox1, textBox3, textBox4, textBox2 };
+            textBoxCollection = textBoxCollection.Where(s => !string.IsNullOrWhiteSpace(s.Text)).Distinct().ToList();
+
+            for (int i = 0;i < textBoxCollection.Count; i++)
+            
+                builder.Append(stringy(textBoxCollection, i));
+            
+
+            return builder.ToString();
+        }
+        // TODO when we make the one search button, set a 
         //Search by First Name
         private void SearchByFNBtn_Click(object sender, EventArgs e)
         {
@@ -77,6 +122,7 @@ namespace UPF_App
             // dataGridView1.Rows.RemoveAt(rowIndex);
             
             if (dataGridView1.CurrentRow == null)
+            
             {
                 MessageBox.Show("Please select a row to delete!");
                 return;
@@ -91,7 +137,6 @@ namespace UPF_App
                     DeleteClient(new Client_Space() { ClientID = clientID });
                 }
             }
-            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -113,11 +158,12 @@ namespace UPF_App
             }
         }
 
-        private List<Client_Space> GetClients(string query, string colunm)
+        // This method searches the database depending on which method 
+        private List<Client_Space> GetClients(string query, string column)
         {
             lastQuery =
                 "Select ClientID, FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
-                " ClientType, Location, SignUpDate from Client_Space where "+colunm+" ='" + query + "'";
+                " ClientType, Location, SignUpDate from Client_Space where " + queryBuilder() + "'";
             List<Client_Space> clients = new List<Client_Space>();
             using (var connection = new MySqlConnection(sqlConnectionString))
             {
