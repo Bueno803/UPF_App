@@ -42,12 +42,10 @@ namespace UPF_App
             this.label5 = new System.Windows.Forms.Label();
             this.EmailTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-
             this.txt_StreetAddy = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_CityAddy = new System.Windows.Forms.TextBox();
             this.txt_ZipAddy = new System.Windows.Forms.TextBox();
-          
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -89,6 +87,7 @@ namespace UPF_App
             // 
             resources.ApplyResources(this.MiddleNameTxt, "MiddleNameTxt");
             this.MiddleNameTxt.Name = "MiddleNameTxt";
+            this.MiddleNameTxt.TextChanged += new System.EventHandler(this.MiddleNameTxt_TextChanged);
             // 
             // label2
             // 
@@ -141,7 +140,6 @@ namespace UPF_App
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Name = "label6";
             // 
-
             // txt_StreetAddy
             // 
             resources.ApplyResources(this.txt_StreetAddy, "txt_StreetAddy");
@@ -150,7 +148,6 @@ namespace UPF_App
             this.txt_StreetAddy.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             this.txt_StreetAddy.Enter += new System.EventHandler(this.streetAddy_enter);
             this.txt_StreetAddy.Leave += new System.EventHandler(this.streetAddy_leave);
-
             // 
             // label7
             // 
@@ -159,7 +156,6 @@ namespace UPF_App
             this.label7.Name = "label7";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-
             // txt_CityAddy
             // 
             resources.ApplyResources(this.txt_CityAddy, "txt_CityAddy");
@@ -176,7 +172,6 @@ namespace UPF_App
             this.txt_ZipAddy.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             this.txt_ZipAddy.Enter += new System.EventHandler(this.zipAddy_enter);
             this.txt_ZipAddy.Leave += new System.EventHandler(this.zipAddy_leave);
-
             // 
             // label8
             // 
@@ -266,7 +261,6 @@ namespace UPF_App
             // 
             // ClientComboBx
             // 
-
             this.ClientComboBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ClientComboBx.FormattingEnabled = true;
             this.ClientComboBx.Items.AddRange(new object[] {
@@ -276,7 +270,6 @@ namespace UPF_App
             resources.GetString("ClientComboBx.Items3")});
             resources.ApplyResources(this.ClientComboBx, "ClientComboBx");
             this.ClientComboBx.Name = "ClientComboBx";
-
             // 
             // label11
             // 
@@ -299,7 +292,6 @@ namespace UPF_App
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
             this.label12.Name = "label12";
             // 
-
             // LocationTxt
             // 
             resources.ApplyResources(this.LocationTxt, "LocationTxt");
@@ -359,7 +351,6 @@ namespace UPF_App
             resources.GetString("StateComboBx.Items45"),
             resources.GetString("StateComboBx.Items46")});
             this.StateComboBx.Name = "StateComboBx";
-
             // 
             // dateTimePicker1
             // 
@@ -418,11 +409,9 @@ namespace UPF_App
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-
             this.Controls.Add(this.txt_ZipAddy);
             this.Controls.Add(this.txt_CityAddy);
             this.Controls.Add(this.txt_StreetAddy);
-
             this.Controls.Add(this.label7);
             this.Controls.Add(this.EmailTxt);
             this.Controls.Add(this.label6);

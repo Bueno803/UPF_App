@@ -288,6 +288,11 @@ namespace UPF_App
             }
         }
 
+        private void MiddleNameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //This method update client record in database    
         //private int UpdateClients(Client_Space client)
         //{
