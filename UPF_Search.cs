@@ -23,11 +23,35 @@ namespace UPF_App
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, Int32 wMsg, bool wParam, Int32 lParam);
         private const int WM_SETREDRAW = 11;
+
+        //Round edges variables
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
+
         private string lastQuery;
+
         public UPF_Search()
         {
             InitializeComponent();
+
+            //Applying rounded edges
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
+
+        //Drag top bar
+        [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr one, int two, int three, int four);
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -185,5 +209,76 @@ namespace UPF_App
             }
             return clients;
         }
+
+        //This method deletes a client record from database    
+        private int DeleteClients(Client_Space client)
+        {
+            using (var connection = new MySqlConnection(sqlConnectionString))
+            {
+                connection.Open();
+                var affectedRows = connection.Execute("Delete from Client_Space Where ClientID = @ClientID", new { ClientID = client.ClientID });
+                this.Refresh();
+                connection.Close();
+                MessageBox.Show("Delete Successful!");
+                return affectedRows;
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void topPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, 0xf012, 0);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+
+            Form1 UPF_SU = new Form1();
+            UPF_SU.Show();
+            //Visible = false;
+
+            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            this.Refresh();
+            Hide();
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+
+            UPF_Search UPF_S = new UPF_Search();
+            UPF_S.Show();
+
+            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            this.Refresh();
+            Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

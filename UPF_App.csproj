@@ -158,6 +158,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Persistence\Domain\ClientSpace.cs" />
+    <Compile Include="RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UPF_HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UPF_HomePage.Designer.cs">
+      <DependentUpon>UPF_HomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UPF_Search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,7 +189,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UPF_HomePage.resx">
+      <DependentUpon>UPF_HomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UPF_SignUp.aa.resx">
       <DependentUpon>UPF_SignUp.cs</DependentUpon>
     </EmbeddedResource>
