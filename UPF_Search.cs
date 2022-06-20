@@ -16,6 +16,7 @@ using UPF_App.Persistence.Domain;
 
 namespace UPF_App
 {
+
     public partial class UPF_Search : Form
     {
         private string sqlConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=upf_app;";
@@ -37,11 +38,14 @@ namespace UPF_App
         );
 
         private string lastQuery;
+        private MySqlDataAdapter Sda;
+        private DataSet ds;
+        private MySqlConnection con = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=;database=upf_app;");
 
         public UPF_Search()
         {
             InitializeComponent();
-
+            displayGrid();
             //Applying rounded edges
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
@@ -60,9 +64,18 @@ namespace UPF_App
 
         private void BackToAdd_Click(object sender, EventArgs e)
         {
+            //SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+
+            //Form1 UPF_SU = new Form1();
+            //UPF_SU.Show();
+            //Visible = false;
+
+            //SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            //this.Hide();
+
             SendMessage(this.Handle, WM_SETREDRAW, false, 0);
 
-            Form1 UPF_SU = new Form1();
+            UPF_HomePage UPF_SU = new UPF_HomePage();
             UPF_SU.Show();
             //Visible = false;
 
@@ -122,22 +135,32 @@ namespace UPF_App
         //Search by First Name
         private void SearchByFNBtn_Click(object sender, EventArgs e)
         {
-            GetClients(FirstNameTxt.Text, "FirstName");
+            displayGrid();
         }
+
+
         //Search by Last Name
         private void SearchByLNBtn_Click(object sender, EventArgs e)
         {
-            GetClients(LastNameTxt.Text, "LastName");
+            
+
         }
         // Search by phone number
         private void SearchByPN_Click(object sender, EventArgs e)
         {
-            GetClients(PhoneNumTxt.Text, "PhoneNumber");
+            if (FirstNameTxt.Text != "")
+                GetClients(FirstNameTxt.Text, "FirstName");
+            if (LastNameTxt.Text != "")
+                GetClients(LastNameTxt.Text, "LastName");
+            if (PhoneNumTxt.Text != "")
+                GetClients(PhoneNumTxt.Text, "PhoneNumber");
+            if (MiddleNameTxt.Text != "")
+                GetClients(MiddleNameTxt.Text, "Location");
         }
         // Search by location
         private void SearchByL_Click(object sender, EventArgs e)
         {
-            GetClients(MiddleNameTxt.Text, "Location");
+            
         }
         // Delete row
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -231,7 +254,7 @@ namespace UPF_App
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void topPanel_Paint(object sender, PaintEventArgs e)
@@ -265,14 +288,27 @@ namespace UPF_App
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+            if (FirstNameTxt.Text != "")
+                GetClients(FirstNameTxt.Text, "FirstName");
+            if (LastNameTxt.Text != "")
+                GetClients(LastNameTxt.Text, "LastName");
+            if (PhoneNumTxt.Text != "")
+                GetClients(PhoneNumTxt.Text, "PhoneNumber");
+            if (MiddleNameTxt.Text != "")
+                GetClients(MiddleNameTxt.Text, "Location");
+        }
 
-            UPF_Search UPF_S = new UPF_Search();
-            UPF_S.Show();
-
-            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
-            this.Refresh();
-            Hide();
+        private void displayGrid()
+        {
+            lastQuery = "SELECT * FROM Client_Space";
+            List<Client_Space> clients = new List<Client_Space>();
+            using (var connection = new MySqlConnection(sqlConnectionString))
+            {
+                connection.Open();
+                clients = connection.Query<Client_Space>(lastQuery).ToList();
+                dataGridView1.DataSource = clients;
+                connection.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -280,5 +316,37 @@ namespace UPF_App
 
         }
 
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (MessageBox.Show("Change Row Value?", "Do you want to save the changes?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    //MessageBox.Show(dataGridView1.CurrentRow.Cells["ClientID"].Value.ToString());
+                    lastQuery = "UPDATE Client_Space SET " + dataGridView1.Columns[e.ColumnIndex].Name + " = '"
+                        + dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "' WHERE ClientID = " + dataGridView1.CurrentRow.Cells["ClientID"].Value;
+                    List<Client_Space> clients = new List<Client_Space>();
+                    using (con)
+                    {
+                        con.Open();
+                        clients = con.Query<Client_Space>(lastQuery).ToList();
+                        dataGridView1.DataSource = clients;
+
+                        //MessageBox.Show("Information Updated", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                }
+                catch(Exception ex)
+                {
+                   MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No changes have been submited");
+            }
+            displayGrid();
+            
+        }
     }
 }

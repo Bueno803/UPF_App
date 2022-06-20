@@ -391,7 +391,7 @@
     <value>20</value>
   </data>
   <data name="EmailTxt.Location" type="System.Drawing.Point, System.Drawing">
-	  <value>284, 396</value>
+    <value>284, 396</value>
   </data>
   <data name="EmailTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 20</value>
@@ -769,79 +769,6 @@
   <data name="&gt;&gt;exitBtn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="button3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="button3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Nirmala UI, 9.75pt, style=Bold</value>
-  </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 278</value>
-  </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 56</value>
-  </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="button3.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>TextBeforeImage</value>
-  </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
-  </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="SearchBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -889,7 +816,7 @@
     <value>NoControl</value>
   </data>
   <data name="SearchBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 222</value>
+    <value>0, 166</value>
   </data>
   <data name="SearchBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 56</value>
@@ -898,7 +825,7 @@
     <value>1</value>
   </data>
   <data name="SearchBtn.Text" xml:space="preserve">
-    <value>Search</value>
+    <value>Search Clients</value>
   </data>
   <data name="SearchBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>TextBeforeImage</value>
@@ -913,59 +840,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;SearchBtn.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="AddBtn.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="AddBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="AddBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Nirmala UI, 9.75pt, style=Bold</value>
-  </data>
-  <data name="AddBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADYAAAAuCAYAAABjwOorAAABg2lDQ1BJQ0MgcHJvZmlsZQAAKM+VkTlI
-        A0EYhT+jokhExBQiFluolYIXop1EUQSFECN4Fe5uTBSym7CbYGMp2AYsPBqvwsZaWwtbQRA8QCytrBRt
-        RNZ/NkKCEMGBYT7ezHvMvIHAQcq03KpusOysEx0Pa7Nz81rNM9U00sAQPbrpZqamx2KUHR+3VKj1pktl
-        8b9RH192TajQhIfNjJMVXhIeWMtmFO8Ih8wVPS58KtzpyAWF75VuFPhFcdLngMoMObHoiHBIWEuWsFHC
-        5opjCfcLt8UtW/IDswWOK15XbKVy5s891QuDy/bMtNJltjLOBFNE0DDIsUqKLF2y2qK4RGU/XMbf4vsj
-        4jLEtYopjlHSWOi+H/UHv7t1E329haRgGKqfPO+tHWq24CvveZ+Hnvd1BJWPcGEX/ekDGHwXPV/U2vah
-        YQPOLouasQ3nm9D8kNEd3ZcqZQYSCXg9kW+ag6ZrqFso9Pazz/EdxKSrySvY3YOOpGQvlnl3bWlvf57x
-        +yP8DfRNctszxNlbAAAACXBIWXMAAA68AAAOvAGVvHJJAAAAB3RJTUUH5gUREAMux1EQyQAAAM1JREFU
-        aEPt1cEJg0AQhWFrsScLsQG9WYJoFRbg2TY8W4D3iWMmEMLEeFEz8n/wQNiFnceCmwAAANxHlmXixZbj
-        0hJlWUrXdWvqur5PMS30Mo4jxf4axaKhWDThii0zpm3byq98K1ZVlbv/PXbU+XTAPM+lKIrNDMNgtUSm
-        aXL3fObSW9XD9QaOQLEj6OF936/ltjLPs4375O35zOXF9sT7eeyJHXOuZcbUPjfpgLxjkVAsGopFQ7Fo
-        tIQXW46raRrxstj1wAMAAOAiSfIAgxkdaLzGIOEAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="AddBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 166</value>
-  </data>
-  <data name="AddBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 56</value>
-  </data>
-  <data name="AddBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="AddBtn.Text" xml:space="preserve">
-    <value>Add</value>
-  </data>
-  <data name="AddBtn.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>TextBeforeImage</value>
-  </data>
-  <data name="&gt;&gt;AddBtn.Name" xml:space="preserve">
-    <value>AddBtn</value>
-  </data>
-  <data name="&gt;&gt;AddBtn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddBtn.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;AddBtn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1916,7 +1791,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -2165,108 +2040,117 @@
     <value>Idaho</value>
   </data>
   <data name="StateComboBx.Items12" xml:space="preserve">
-    <value>IllinoisIndiana</value>
+    <value>Illinois</value>
   </data>
   <data name="StateComboBx.Items13" xml:space="preserve">
-    <value>Iowa</value>
+    <value>Indiana</value>
   </data>
   <data name="StateComboBx.Items14" xml:space="preserve">
-    <value>Kansas</value>
+    <value>Iowa</value>
   </data>
   <data name="StateComboBx.Items15" xml:space="preserve">
-    <value>Kentucky</value>
+    <value>Kansas</value>
   </data>
   <data name="StateComboBx.Items16" xml:space="preserve">
-    <value>Louisiana</value>
+    <value>Kentucky</value>
   </data>
   <data name="StateComboBx.Items17" xml:space="preserve">
-    <value>Maine</value>
+    <value>Louisiana</value>
   </data>
   <data name="StateComboBx.Items18" xml:space="preserve">
-    <value>Maryland</value>
+    <value>Maine</value>
   </data>
   <data name="StateComboBx.Items19" xml:space="preserve">
-    <value>Massachusetts</value>
+    <value>Maryland</value>
   </data>
   <data name="StateComboBx.Items20" xml:space="preserve">
-    <value>Michigan</value>
+    <value>Massachusetts</value>
   </data>
   <data name="StateComboBx.Items21" xml:space="preserve">
-    <value>Minnesota</value>
+    <value>Michigan</value>
   </data>
   <data name="StateComboBx.Items22" xml:space="preserve">
-    <value>Mississippi</value>
+    <value>Minnesota</value>
   </data>
   <data name="StateComboBx.Items23" xml:space="preserve">
-    <value>Missouri</value>
+    <value>Mississippi</value>
   </data>
   <data name="StateComboBx.Items24" xml:space="preserve">
-    <value>MontanaNebraska</value>
+    <value>Missouri</value>
   </data>
   <data name="StateComboBx.Items25" xml:space="preserve">
-    <value>Nevada</value>
+    <value>Montana</value>
   </data>
   <data name="StateComboBx.Items26" xml:space="preserve">
-    <value>New Hampshire</value>
+    <value>Nebraska</value>
   </data>
   <data name="StateComboBx.Items27" xml:space="preserve">
-    <value>New Jersey</value>
+    <value>Nevada</value>
   </data>
   <data name="StateComboBx.Items28" xml:space="preserve">
-    <value>New Mexico</value>
+    <value>New Hampshire</value>
   </data>
   <data name="StateComboBx.Items29" xml:space="preserve">
-    <value>New York</value>
+    <value>New Jersey</value>
   </data>
   <data name="StateComboBx.Items30" xml:space="preserve">
-    <value>North Carolina</value>
+    <value>New Mexico</value>
   </data>
   <data name="StateComboBx.Items31" xml:space="preserve">
-    <value>North Dakota</value>
+    <value>New York</value>
   </data>
   <data name="StateComboBx.Items32" xml:space="preserve">
-    <value>Ohio</value>
+    <value>North Carolina</value>
   </data>
   <data name="StateComboBx.Items33" xml:space="preserve">
-    <value>Oklahoma</value>
+    <value>North Dakota</value>
   </data>
   <data name="StateComboBx.Items34" xml:space="preserve">
-    <value>Oregon</value>
+    <value>Ohio</value>
   </data>
   <data name="StateComboBx.Items35" xml:space="preserve">
-    <value>PennsylvaniaRhode Island</value>
+    <value>Oklahoma</value>
   </data>
   <data name="StateComboBx.Items36" xml:space="preserve">
-    <value>South Carolina</value>
+    <value>Oregon</value>
   </data>
   <data name="StateComboBx.Items37" xml:space="preserve">
-    <value>South Dakota</value>
+    <value>Pennsylvania</value>
   </data>
   <data name="StateComboBx.Items38" xml:space="preserve">
-    <value>Tennessee</value>
+    <value>Rhode Island</value>
   </data>
   <data name="StateComboBx.Items39" xml:space="preserve">
-    <value>Texas</value>
+    <value>South Carolina</value>
   </data>
   <data name="StateComboBx.Items40" xml:space="preserve">
-    <value>Utah</value>
+    <value>South Dakota</value>
   </data>
   <data name="StateComboBx.Items41" xml:space="preserve">
-    <value>Vermont</value>
+    <value>Tennessee</value>
   </data>
   <data name="StateComboBx.Items42" xml:space="preserve">
-    <value>Virginia</value>
+    <value>Texas</value>
   </data>
   <data name="StateComboBx.Items43" xml:space="preserve">
-    <value>Washington</value>
+    <value>Utah</value>
   </data>
   <data name="StateComboBx.Items44" xml:space="preserve">
-    <value>West Virginia</value>
+    <value>Vermont</value>
   </data>
   <data name="StateComboBx.Items45" xml:space="preserve">
-    <value>Wisconsin</value>
+    <value>Virginia</value>
   </data>
   <data name="StateComboBx.Items46" xml:space="preserve">
+    <value>Washington</value>
+  </data>
+  <data name="StateComboBx.Items47" xml:space="preserve">
+    <value>West Virginia</value>
+  </data>
+  <data name="StateComboBx.Items48" xml:space="preserve">
+    <value>Wisconsin</value>
+  </data>
+  <data name="StateComboBx.Items49" xml:space="preserve">
     <value>Wyoming</value>
   </data>
   <data name="StateComboBx.Location" type="System.Drawing.Point, System.Drawing">

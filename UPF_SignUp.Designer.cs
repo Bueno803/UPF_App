@@ -51,9 +51,7 @@ namespace UPF_App
             this.panel1 = new System.Windows.Forms.Panel();
             this.BackToHP = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
-            this.AddBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.ClientComboBx = new System.Windows.Forms.ComboBox();
@@ -190,9 +188,7 @@ namespace UPF_App
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(144)))));
             this.panel1.Controls.Add(this.BackToHP);
             this.panel1.Controls.Add(this.exitBtn);
-            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.SearchBtn);
-            this.panel1.Controls.Add(this.AddBtn);
             this.panel1.Controls.Add(this.pictureBox1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
@@ -217,15 +213,6 @@ namespace UPF_App
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // SearchBtn
             // 
             resources.ApplyResources(this.SearchBtn, "SearchBtn");
@@ -234,15 +221,6 @@ namespace UPF_App
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.UseVisualStyleBackColor = true;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
-            // AddBtn
-            // 
-            resources.ApplyResources(this.AddBtn, "AddBtn");
-            this.AddBtn.FlatAppearance.BorderSize = 0;
-            this.AddBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.UseVisualStyleBackColor = true;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // pictureBox1
             // 
@@ -349,7 +327,10 @@ namespace UPF_App
             resources.GetString("StateComboBx.Items43"),
             resources.GetString("StateComboBx.Items44"),
             resources.GetString("StateComboBx.Items45"),
-            resources.GetString("StateComboBx.Items46")});
+            resources.GetString("StateComboBx.Items46"),
+            resources.GetString("StateComboBx.Items47"),
+            resources.GetString("StateComboBx.Items48"),
+            resources.GetString("StateComboBx.Items49")});
             this.StateComboBx.Name = "StateComboBx";
             // 
             // dateTimePicker1
@@ -460,11 +441,9 @@ namespace UPF_App
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.ComboBox ClientComboBx;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox GenderComboBx;
         private System.Windows.Forms.Label label12;

@@ -33,6 +33,10 @@ namespace UPF_App
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
+            this.BackToAdd = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
@@ -44,19 +48,12 @@ namespace UPF_App
             this.label3 = new System.Windows.Forms.Label();
             this.MiddleNameTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.BackToAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.SearchByFirstNBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.SearchByFirstNBtn = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
             this.CloseBtn = new System.Windows.Forms.Button();
-            this.exitBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.SearchBtn = new System.Windows.Forms.Button();
-            this.AddBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -94,7 +91,6 @@ namespace UPF_App
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(144)))));
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.SearchBtn);
             this.panel1.Controls.Add(this.AddBtn);
             this.panel1.Controls.Add(this.exitBtn);
@@ -105,6 +101,84 @@ namespace UPF_App
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(190, 662);
             this.panel1.TabIndex = 28;
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SearchBtn.FlatAppearance.BorderSize = 0;
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.SearchBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.SearchBtn.Image = ((System.Drawing.Image)(resources.GetObject("SearchBtn.Image")));
+            this.SearchBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.SearchBtn.Location = new System.Drawing.Point(0, 165);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(190, 56);
+            this.SearchBtn.TabIndex = 4;
+            this.SearchBtn.Text = "Add New Client";
+            this.SearchBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.FlatAppearance.BorderSize = 0;
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.AddBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.AddBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddBtn.Image")));
+            this.AddBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.AddBtn.Location = new System.Drawing.Point(0, 165);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(190, 56);
+            this.AddBtn.TabIndex = 5;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.Firebrick;
+            this.exitBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.exitBtn.FlatAppearance.BorderSize = 0;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.exitBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
+            this.exitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.exitBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.exitBtn.Location = new System.Drawing.Point(0, 606);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.exitBtn.Size = new System.Drawing.Size(190, 56);
+            this.exitBtn.TabIndex = 2;
+            this.exitBtn.Text = "Exit Application";
+            this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            // 
+            // BackToAdd
+            // 
+            this.BackToAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BackToAdd.FlatAppearance.BorderSize = 0;
+            this.BackToAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToAdd.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.BackToAdd.ForeColor = System.Drawing.SystemColors.Control;
+            this.BackToAdd.Image = ((System.Drawing.Image)(resources.GetObject("BackToAdd.Image")));
+            this.BackToAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BackToAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BackToAdd.Location = new System.Drawing.Point(-2, 549);
+            this.BackToAdd.Name = "BackToAdd";
+            this.BackToAdd.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.BackToAdd.Size = new System.Drawing.Size(190, 56);
+            this.BackToAdd.TabIndex = 1;
+            this.BackToAdd.Text = "Return To Home Page";
+            this.BackToAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackToAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.BackToAdd.UseVisualStyleBackColor = true;
+            this.BackToAdd.Click += new System.EventHandler(this.BackToAdd_Click);
             // 
             // pictureBox2
             // 
@@ -123,9 +197,10 @@ namespace UPF_App
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(243, 166);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(803, 455);
+            this.dataGridView1.Size = new System.Drawing.Size(795, 415);
             this.dataGridView1.TabIndex = 29;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // label10
             // 
@@ -219,114 +294,61 @@ namespace UPF_App
             this.label2.TabIndex = 37;
             this.label2.Text = "Location";
             // 
-            // BackToAdd
-            // 
-            this.BackToAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BackToAdd.FlatAppearance.BorderSize = 0;
-            this.BackToAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackToAdd.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.BackToAdd.ForeColor = System.Drawing.SystemColors.Control;
-            this.BackToAdd.Image = ((System.Drawing.Image)(resources.GetObject("BackToAdd.Image")));
-            this.BackToAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BackToAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BackToAdd.Location = new System.Drawing.Point(-2, 549);
-            this.BackToAdd.Name = "BackToAdd";
-            this.BackToAdd.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.BackToAdd.Size = new System.Drawing.Size(190, 56);
-            this.BackToAdd.TabIndex = 1;
-            this.BackToAdd.Text = "Back";
-            this.BackToAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BackToAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BackToAdd.UseVisualStyleBackColor = true;
-            this.BackToAdd.Click += new System.EventHandler(this.BackToAdd_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
             this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.SearchByFirstNBtn);
             this.panel2.Location = new System.Drawing.Point(244, 580);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(802, 41);
+            this.panel2.Size = new System.Drawing.Size(794, 41);
             this.panel2.TabIndex = 39;
-            // 
-            // SearchByFirstNBtn
-            // 
-            this.SearchByFirstNBtn.BackColor = System.Drawing.Color.Gray;
-            this.SearchByFirstNBtn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SearchByFirstNBtn.FlatAppearance.BorderSize = 0;
-            this.SearchByFirstNBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchByFirstNBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.SearchByFirstNBtn.Location = new System.Drawing.Point(0, 0);
-            this.SearchByFirstNBtn.Name = "SearchByFirstNBtn";
-            this.SearchByFirstNBtn.Size = new System.Drawing.Size(121, 41);
-            this.SearchByFirstNBtn.TabIndex = 0;
-            this.SearchByFirstNBtn.Text = "Search by First Name";
-            this.SearchByFirstNBtn.UseVisualStyleBackColor = false;
-            this.SearchByFirstNBtn.Click += new System.EventHandler(this.SearchByFNBtn_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button3.Location = new System.Drawing.Point(121, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 41);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Search by Last Name";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.SearchByLNBtn_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Gray;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button4.Location = new System.Drawing.Point(242, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 41);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Search by Phone Number";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.SearchByPN_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Gray;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button5.Location = new System.Drawing.Point(386, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(158, 41);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Search by Service Location";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.SearchByL_Click);
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Firebrick;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
-            this.button6.Location = new System.Drawing.Point(542, 0);
+            this.button6.Location = new System.Drawing.Point(536, 0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(260, 41);
             this.button6.TabIndex = 4;
             this.button6.Text = "Delete Entry";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Goldenrod;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.button4.Location = new System.Drawing.Point(245, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(291, 41);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Search by Phone Number";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.SearchByPN_Click);
+            // 
+            // SearchByFirstNBtn
+            // 
+            this.SearchByFirstNBtn.BackColor = System.Drawing.Color.ForestGreen;
+            this.SearchByFirstNBtn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SearchByFirstNBtn.FlatAppearance.BorderSize = 0;
+            this.SearchByFirstNBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchByFirstNBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(237)))), ((int)(((byte)(237)))));
+            this.SearchByFirstNBtn.Location = new System.Drawing.Point(0, 0);
+            this.SearchByFirstNBtn.Name = "SearchByFirstNBtn";
+            this.SearchByFirstNBtn.Size = new System.Drawing.Size(245, 41);
+            this.SearchByFirstNBtn.TabIndex = 0;
+            this.SearchByFirstNBtn.Text = "Reload Data";
+            this.SearchByFirstNBtn.UseVisualStyleBackColor = false;
+            this.SearchByFirstNBtn.Click += new System.EventHandler(this.SearchByFNBtn_Click);
             // 
             // topPanel
             // 
@@ -354,82 +376,6 @@ namespace UPF_App
             this.CloseBtn.Text = "X";
             this.CloseBtn.UseVisualStyleBackColor = true;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
-            // 
-            // exitBtn
-            // 
-            this.exitBtn.BackColor = System.Drawing.Color.Firebrick;
-            this.exitBtn.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.exitBtn.FlatAppearance.BorderSize = 0;
-            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.exitBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.exitBtn.Image = ((System.Drawing.Image)(resources.GetObject("exitBtn.Image")));
-            this.exitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.exitBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.exitBtn.Location = new System.Drawing.Point(0, 606);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.exitBtn.Size = new System.Drawing.Size(190, 56);
-            this.exitBtn.TabIndex = 2;
-            this.exitBtn.Text = "Exit Application";
-            this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.CloseBtn_Click);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(0, 277);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 56);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Search";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // SearchBtn
-            // 
-            this.SearchBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SearchBtn.FlatAppearance.BorderSize = 0;
-            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.SearchBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.SearchBtn.Image = ((System.Drawing.Image)(resources.GetObject("SearchBtn.Image")));
-            this.SearchBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.SearchBtn.Location = new System.Drawing.Point(0, 221);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(190, 56);
-            this.SearchBtn.TabIndex = 4;
-            this.SearchBtn.Text = "Search";
-            this.SearchBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.SearchBtn.UseVisualStyleBackColor = true;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddBtn.FlatAppearance.BorderSize = 0;
-            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddBtn.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.AddBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.AddBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddBtn.Image")));
-            this.AddBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.AddBtn.Location = new System.Drawing.Point(0, 165);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(190, 56);
-            this.AddBtn.TabIndex = 5;
-            this.AddBtn.Text = "Add";
-            this.AddBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.AddBtn.UseVisualStyleBackColor = true;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // UPF_Search
             // 
@@ -487,13 +433,10 @@ namespace UPF_App
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button SearchByFirstNBtn;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Button CloseBtn;
         private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.Button AddBtn;
     }
