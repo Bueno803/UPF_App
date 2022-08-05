@@ -1,7 +1,7 @@
 ﻿
 namespace UPF_App
 {
-    partial class Form1
+    partial class AgeNumDownBx
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace UPF_App
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgeNumDownBx));
             this.label1 = new System.Windows.Forms.Label();
             this.FirstNameTxt = new System.Windows.Forms.TextBox();
             this.MiddleNameTxt = new System.Windows.Forms.TextBox();
@@ -64,9 +64,13 @@ namespace UPF_App
             this.topPanel = new System.Windows.Forms.Panel();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.addClientBtn = new UPF_App.RoundedButton();
+            this.BeltLvlComboBx = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -244,8 +248,7 @@ namespace UPF_App
             this.ClientComboBx.Items.AddRange(new object[] {
             resources.GetString("ClientComboBx.Items"),
             resources.GetString("ClientComboBx.Items1"),
-            resources.GetString("ClientComboBx.Items2"),
-            resources.GetString("ClientComboBx.Items3")});
+            resources.GetString("ClientComboBx.Items2")});
             resources.ApplyResources(this.ClientComboBx, "ClientComboBx");
             this.ClientComboBx.Name = "ClientComboBx";
             // 
@@ -372,11 +375,54 @@ namespace UPF_App
             this.addClientBtn.UseVisualStyleBackColor = false;
             this.addClientBtn.Click += new System.EventHandler(this.addClientBtn_Click);
             // 
-            // Form1
+            // BeltLvlComboBx
+            // 
+            this.BeltLvlComboBx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BeltLvlComboBx.FormattingEnabled = true;
+            this.BeltLvlComboBx.Items.AddRange(new object[] {
+            resources.GetString("BeltLvlComboBx.Items"),
+            resources.GetString("BeltLvlComboBx.Items1"),
+            resources.GetString("BeltLvlComboBx.Items2"),
+            resources.GetString("BeltLvlComboBx.Items3"),
+            resources.GetString("BeltLvlComboBx.Items4"),
+            resources.GetString("BeltLvlComboBx.Items5"),
+            resources.GetString("BeltLvlComboBx.Items6"),
+            resources.GetString("BeltLvlComboBx.Items7"),
+            resources.GetString("BeltLvlComboBx.Items8"),
+            resources.GetString("BeltLvlComboBx.Items9"),
+            resources.GetString("BeltLvlComboBx.Items10")});
+            resources.ApplyResources(this.BeltLvlComboBx, "BeltLvlComboBx");
+            this.BeltLvlComboBx.Name = "BeltLvlComboBx";
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.ForeColor = System.Drawing.SystemColors.Control;
+            this.label13.Name = "label13";
+            // 
+            // numericUpDown1
+            // 
+            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // AgeNumDownBx
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(75)))), ((int)(((byte)(150)))));
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.BeltLvlComboBx);
             this.Controls.Add(this.addClientBtn);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.dateTimePicker1);
@@ -407,11 +453,12 @@ namespace UPF_App
             this.Controls.Add(this.FirstNameTxt);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "AgeNumDownBx";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.topPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,6 +501,9 @@ namespace UPF_App
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Button CloseBtn;
         private RoundedButton addClientBtn;
+        private System.Windows.Forms.ComboBox BeltLvlComboBx;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
