@@ -12,6 +12,7 @@ namespace UPF_App.Persistence.Domain
 		public String FirstName { get; set; }
 		public String MiddleName { get; set; }
 		public String LastName { get; set; }
+        public decimal Age { get; set; }
 		public String PhoneNumber { get; set; }
 		public String HomeNumber { get; set; }
 		public String Email { get; set; }
@@ -23,9 +24,6 @@ namespace UPF_App.Persistence.Domain
 		public String ClientType { get; set; }
 		public String Location { get; set; }
 		public DateTime SignUpDate { get; set; }
-
-		public Client_Space()
-		{
-		}
+        public string BeltLvl { get; set; }
 	}
 }

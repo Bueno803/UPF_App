@@ -52,7 +52,7 @@ namespace UPF_App
         {
             SendMessage(this.Handle, WM_SETREDRAW, false, 0);
 
-            Form1 UPF_SU = new Form1();
+            AgeNumDownBx UPF_SU = new AgeNumDownBx();
             UPF_SU.Show();
             //Visible = false;
 

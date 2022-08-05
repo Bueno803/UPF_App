@@ -8,7 +8,7 @@ using UPF_App.Persistence.Domain;
 
 namespace UPF_App
 {
-    public partial class Form1 : Form
+    public partial class AgeNumDownBx : Form
     {
         //private string sqlConnectionString = @"Data Source = localhost;initial catalog=upf databases;user id=rooty;password=password";
         private string sqlConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=upf_app;";
@@ -46,9 +46,14 @@ namespace UPF_App
         );
 
 
-        public Form1()
+        public AgeNumDownBx()
         {
             InitializeComponent();
+            BeltLvlComboBx.SelectedItem = "White";
+            ClientComboBx.SelectedItem = "TKD/HKD Class";
+            StateComboBx.SelectedItem = "South Carolina";
+            GenderComboBx.SelectedItem = "Male";
+
 
             //Applying rounded edges
             this.FormBorderStyle = FormBorderStyle.None;
@@ -98,7 +103,7 @@ namespace UPF_App
         {
             SendMessage(this.Handle, WM_SETREDRAW, false, 0);
 
-            Form1 UPF_SU = new Form1();
+            AgeNumDownBx UPF_SU = new AgeNumDownBx();
             UPF_SU.Show();
             //Visible = false;
 
@@ -129,30 +134,99 @@ namespace UPF_App
         {
             using (MySqlConnection connection = new MySqlConnection(sqlConnectionString))
             {
+                if (ClientExists(client.FirstName, client.LastName))
+                {
+                    var result = MessageBox.Show(client.FirstName + " " + client.LastName + " exists in the data base already, would you like to add them anyway?", "Client Exists", MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question);
+                    if (result == DialogResult.No)
+                        return 0;
+                    else
+                    {
+                        connection.Open();
+                        var affectedRows = connection.Execute("Insert into client_space (FirstName, MiddleName, LastName, Age, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
+                                                                                               " ClientType, Location, SignUpDate, BeltLvl) values (@FirstName, @MiddleName, @LastName, @Age, @PhoneNumber, @HomeNumber, @Email, @StreetAddress, @State, @City, @PostalCode, @Gender," +
+                                                                                               " @ClientType, @Location, @SignUpDate, @BeltLvl)", new
+                                                                                               {
+                                                                                                   client.FirstName,
+                                                                                                   client.MiddleName,
+                                                                                                   client.LastName,
+                                                                                                   client.Age,
+                                                                                                   client.PhoneNumber
+                                                                                               ,
+                                                                                                   client.HomeNumber,
+                                                                                                   client.Email,
+                                                                                                   client.StreetAddress,
+                                                                                                   client.State,
+                                                                                                   client.City,
+                                                                                                   client.PostalCode
+                                                                                               ,
+                                                                                                   client.Gender,
+                                                                                                   client.ClientType,
+                                                                                                   client.Location,
+                                                                                                   client.SignUpDate,
+                                                                                                   client.BeltLvl
+                                                                                               });
+                        connection.Close();
+                        return affectedRows;
+                    }
+                }
+                else
+                {
+                    connection.Open();
+                    var affectedRows = connection.Execute("Insert into client_space (FirstName, MiddleName, LastName, Age, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
+                                                                                           " ClientType, Location, SignUpDate, BeltLvl) values (@FirstName, @MiddleName, @LastName, @Age, @PhoneNumber, @HomeNumber, @Email, @StreetAddress, @State, @City, @PostalCode, @Gender," +
+                                                                                           " @ClientType, @Location, @SignUpDate, @BeltLvl)", new
+                                                                                           {
+                                                                                               client.FirstName,
+                                                                                               client.MiddleName,
+                                                                                               client.LastName,
+                                                                                               client.Age,
+                                                                                               client.PhoneNumber
+                                                                                           ,
+                                                                                               client.HomeNumber,
+                                                                                               client.Email,
+                                                                                               client.StreetAddress,
+                                                                                               client.State,
+                                                                                               client.City,
+                                                                                               client.PostalCode
+                                                                                           ,
+                                                                                               client.Gender,
+                                                                                               client.ClientType,
+                                                                                               client.Location,
+                                                                                               client.SignUpDate,
+                                                                                               client.BeltLvl
+                                                                                           });
+                    connection.Close();
+                    return affectedRows;
+                }
+            }
+        }
+
+        private bool ClientExists(string FName, string LName)
+        {
+            using (MySqlConnection connection = new MySqlConnection(sqlConnectionString))
+            {
                 connection.Open();
-                var affectedRows = connection.Execute("Insert into client_space (FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
-                                                                                       " ClientType, Location, SignUpDate) values (@FirstName, @MiddleName, @LastName, @PhoneNumber, @HomeNumber, @Email, @StreetAddress, @State, @City, @PostalCode, @Gender," +
-                                                                                       " @ClientType, @Location, @SignUpDate)", new
-                                                                                       {
-                                                                                           client.FirstName,
-                                                                                           client.MiddleName,
-                                                                                           client.LastName,
-                                                                                           client.PhoneNumber
-                                                                                       ,
-                                                                                           client.HomeNumber,
-                                                                                           client.Email,
-                                                                                           client.StreetAddress,
-                                                                                           client.State,
-                                                                                           client.City,
-                                                                                           client.PostalCode
-                                                                                       ,
-                                                                                           client.Gender,
-                                                                                           client.ClientType,
-                                                                                           client.Location,
-                                                                                           client.SignUpDate
-                                                                                       });
-                connection.Close();
-                return affectedRows;
+                MySqlCommand command = new MySqlCommand();
+                command.Connection = connection;
+                command.CommandText = "SELECT count(*) FROM Client_Space WHERE FirstName = @FName AND LastName = @LName";
+                command.Parameters.AddWithValue("@FName", FName);
+                command.Parameters.AddWithValue("@LName", LName);
+                int userExist = Convert.ToInt32(command.ExecuteScalar());
+                MessageBox.Show(userExist.ToString());
+
+                if (userExist > 0)
+                    return true;
+                else
+                    return false;
+               // var checkedRows = connection.Execute("SELECT ClientID FROM Client_Space WHERE FirstName='" + FName + "'");// AND LastName='" + LName + "'");
+               //
+               //
+               // MessageBox.Show(checkedRows.ToString());
+               //
+               // if (checkedRows > 0)
+                    
+
             }
         }
 
@@ -213,11 +287,12 @@ namespace UPF_App
         {
             int ZipCode = Int32.Parse(txt_ZipAddy.Text);
             DateTime SignUpDate = DateTime.Parse(dateTimePicker1.Text);
-            InsertClient(new Client_Space()
+            int result = InsertClient(new Client_Space()
             {
                 FirstName = FirstNameTxt.Text,
                 MiddleName = MiddleNameTxt.Text,
                 LastName = LastNameTxt.Text,
+                Age = numericUpDown1.Value,
                 PhoneNumber = PhoneNumTxt.Text,
                 HomeNumber = HomeNumTxt.Text,
                 Email = EmailTxt.Text,
@@ -228,10 +303,13 @@ namespace UPF_App
                 Gender = GenderComboBx.Text,
                 ClientType = ClientComboBx.Text,
                 Location = LocationTxt.Text,
-                SignUpDate = SignUpDate
+                SignUpDate = SignUpDate,
+                BeltLvl = BeltLvlComboBx.Text
             });
-
-            MessageBox.Show("Successfully added to database!");
+            if(result == 1)
+                MessageBox.Show("Successfully added to database!");
+            else
+                MessageBox.Show("NO entry!");
         }
 
         private void streetAddy_enter(object sender, EventArgs e)

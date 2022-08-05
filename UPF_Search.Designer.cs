@@ -29,6 +29,7 @@ namespace UPF_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UPF_Search));
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,12 +55,16 @@ namespace UPF_App
             this.SearchByFirstNBtn = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
             this.CloseBtn = new System.Windows.Forms.Button();
+            this.clientSpaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uPFSearchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientSpaceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uPFSearchBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -195,11 +200,10 @@ namespace UPF_App
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 166);
+            this.dataGridView1.Location = new System.Drawing.Point(247, 166);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(795, 415);
             this.dataGridView1.TabIndex = 29;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             // 
             // label10
@@ -331,7 +335,7 @@ namespace UPF_App
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(291, 41);
             this.button4.TabIndex = 2;
-            this.button4.Text = "Search by Phone Number";
+            this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.SearchByPN_Click);
             // 
@@ -377,6 +381,14 @@ namespace UPF_App
             this.CloseBtn.UseVisualStyleBackColor = true;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
+            // clientSpaceBindingSource
+            // 
+            this.clientSpaceBindingSource.DataSource = typeof(UPF_App.Persistence.Domain.Client_Space);
+            // 
+            // uPFSearchBindingSource
+            // 
+            this.uPFSearchBindingSource.DataSource = typeof(UPF_App.UPF_Search);
+            // 
             // UPF_Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,6 +420,8 @@ namespace UPF_App
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.clientSpaceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uPFSearchBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,5 +453,7 @@ namespace UPF_App
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.BindingSource clientSpaceBindingSource;
+        private System.Windows.Forms.BindingSource uPFSearchBindingSource;
     }
 }

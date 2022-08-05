@@ -149,13 +149,13 @@ namespace UPF_App
         private void SearchByPN_Click(object sender, EventArgs e)
         {
             if (FirstNameTxt.Text != "")
-                GetClients(FirstNameTxt.Text, "FirstName");
+                GetClients();
             if (LastNameTxt.Text != "")
-                GetClients(LastNameTxt.Text, "LastName");
+                GetClients();
             if (PhoneNumTxt.Text != "")
-                GetClients(PhoneNumTxt.Text, "PhoneNumber");
+                GetClients();
             if (MiddleNameTxt.Text != "")
-                GetClients(MiddleNameTxt.Text, "Location");
+                GetClients();
         }
         // Search by location
         private void SearchByL_Click(object sender, EventArgs e)
@@ -186,11 +186,6 @@ namespace UPF_App
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         //This method deletes a client record from database    
         private int DeleteClient(Client_Space client)
         {
@@ -206,11 +201,11 @@ namespace UPF_App
         }
 
         // This method searches the database depending on which method 
-        private List<Client_Space> GetClients(string query, string column)
+        private List<Client_Space> GetClients()
         {
             lastQuery =
-                "Select ClientID, FirstName, MiddleName, LastName, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
-                " ClientType, Location, SignUpDate from Client_Space where " + queryBuilder() + "'";
+                "Select ClientID, FirstName, MiddleName, LastName, Age, PhoneNumber, HomeNumber, Email, StreetAddress, State, City, PostalCode, Gender," +
+                " ClientType, Location, SignUpDate, BeltLvl from Client_Space where " + queryBuilder() + "'";
             List<Client_Space> clients = new List<Client_Space>();
             using (var connection = new MySqlConnection(sqlConnectionString))
             {
@@ -277,7 +272,7 @@ namespace UPF_App
         {
             SendMessage(this.Handle, WM_SETREDRAW, false, 0);
 
-            Form1 UPF_SU = new Form1();
+            AgeNumDownBx UPF_SU = new AgeNumDownBx();
             UPF_SU.Show();
             //Visible = false;
 
@@ -288,14 +283,18 @@ namespace UPF_App
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            if (FirstNameTxt.Text != "")
-                GetClients(FirstNameTxt.Text, "FirstName");
-            if (LastNameTxt.Text != "")
-                GetClients(LastNameTxt.Text, "LastName");
-            if (PhoneNumTxt.Text != "")
-                GetClients(PhoneNumTxt.Text, "PhoneNumber");
-            if (MiddleNameTxt.Text != "")
-                GetClients(MiddleNameTxt.Text, "Location");
+            // this function is the button to switch to the "add a new client" page
+            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+
+            AgeNumDownBx UPF_SU = new AgeNumDownBx();
+            UPF_SU.Show();
+
+            //UPF_HomePage UPF_Add = new UPF_HomePage();
+            //UPF_Add.Show();
+            //Visible = false;
+
+            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            this.Hide();
         }
 
         private void displayGrid()
@@ -318,7 +317,7 @@ namespace UPF_App
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (MessageBox.Show("Change Row Value?", "Do you want to save the changes?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Change Row Value", "Do you want to save the changes?", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 try
                 {
@@ -331,9 +330,9 @@ namespace UPF_App
                         con.Open();
                         clients = con.Query<Client_Space>(lastQuery).ToList();
                         dataGridView1.DataSource = clients;
-
+         
                         //MessageBox.Show("Information Updated", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+         
                     }
                 }
                 catch(Exception ex)
