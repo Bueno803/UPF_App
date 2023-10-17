@@ -1,13 +1,17 @@
 ﻿using Dapper;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using UPF_App.Persistence.Domain;
 
 namespace UPF_App
 {
+
+    
     public partial class AgeNumDownBx : Form
     {
         //private string sqlConnectionString = @"Data Source = localhost;initial catalog=upf databases;user id=rooty;password=password";
@@ -31,6 +35,8 @@ namespace UPF_App
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, Int32 wMsg, bool wParam, Int32 lParam);
         private const int WM_SETREDRAW = 11;
+        int BeltIndexParser = 0;
+        String BeltLevel = "";
 
 
         //Rounded edges variables
@@ -48,6 +54,8 @@ namespace UPF_App
 
         public AgeNumDownBx()
         {
+            
+            
             InitializeComponent();
             BeltLvlComboBx.SelectedItem = "White";
             ClientComboBx.SelectedItem = "TKD/HKD Class";
@@ -55,9 +63,11 @@ namespace UPF_App
             GenderComboBx.SelectedItem = "Male";
 
 
+
             //Applying rounded edges
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            InitializeLocComboBox();
         }
 
         //Drag top bar
@@ -181,15 +191,13 @@ namespace UPF_App
                                                                                                client.MiddleName,
                                                                                                client.LastName,
                                                                                                client.Age,
-                                                                                               client.PhoneNumber
-                                                                                           ,
+                                                                                               client.PhoneNumber,
                                                                                                client.HomeNumber,
                                                                                                client.Email,
                                                                                                client.StreetAddress,
                                                                                                client.State,
                                                                                                client.City,
-                                                                                               client.PostalCode
-                                                                                           ,
+                                                                                               client.PostalCode,
                                                                                                client.Gender,
                                                                                                client.ClientType,
                                                                                                client.Location,
@@ -213,7 +221,7 @@ namespace UPF_App
                 command.Parameters.AddWithValue("@FName", FName);
                 command.Parameters.AddWithValue("@LName", LName);
                 int userExist = Convert.ToInt32(command.ExecuteScalar());
-                MessageBox.Show(userExist.ToString());
+                //MessageBox.Show(userExist.ToString());
 
                 if (userExist > 0)
                     return true;
@@ -285,6 +293,13 @@ namespace UPF_App
 
         private void addClientBtn_Click(object sender, EventArgs e)
         {
+            BeltIndexParser = 0;
+            BeltLevel = "";
+            while(BeltLvlComboBx.Text[BeltIndexParser] != ' ')
+            {
+                BeltLevel = BeltLevel + BeltLvlComboBx.Text[BeltIndexParser];
+                BeltIndexParser++;
+            }
             int ZipCode = Int32.Parse(txt_ZipAddy.Text);
             DateTime SignUpDate = DateTime.Parse(dateTimePicker1.Text);
             int result = InsertClient(new Client_Space()
@@ -302,10 +317,10 @@ namespace UPF_App
                 PostalCode = ZipCode,
                 Gender = GenderComboBx.Text,
                 ClientType = ClientComboBx.Text,
-                Location = LocationTxt.Text,
+                Location = LocBox.Text,
                 SignUpDate = SignUpDate,
-                BeltLvl = BeltLvlComboBx.Text
-            });
+                BeltLvl = int.Parse(BeltLevel)
+            }) ;
             if(result == 1)
                 MessageBox.Show("Successfully added to database!");
             else
@@ -368,6 +383,59 @@ namespace UPF_App
 
         private void MiddleNameTxt_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void ClientComboBx_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LocBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Would you like to add " + LocationTxt.Text + " to the list of locations?", "New Location?", MessageBoxButtons.YesNoCancel);
+            if (!LocBox.Items.Contains(LocationTxt.Text) && result == DialogResult.Yes)
+            {
+                LocBox.Items.Add(LocationTxt.Text);
+
+                string lastQuery =
+                "Insert into upf_locations (LocationName) values ('" + LocationTxt.Text + "')";
+
+                using (MySqlConnection connection = new MySqlConnection(sqlConnectionString))
+                {
+                    connection.Open();
+                    connection.Query<Location_Addition>(lastQuery);
+                    connection.Close();
+
+                }
+            } else if (LocBox.Items.Contains(LocationTxt.Text))
+            {
+                MessageBox.Show("Location Exists in the Database!");
+            }
+        }
+
+        private void InitializeLocComboBox()
+        {
+            List<Location_Addition> LocationList = new List<Location_Addition>();
+
+            using (var connection = new MySqlConnection(sqlConnectionString))
+            {
+
+                connection.Open();
+                LocationList = connection.Query<Location_Addition>("SELECT * FROM `upf_locations` WHERE 1").ToList();
+                //dataGridView1.DataSource = LocationList;
+                connection.Close();
+            }
+            foreach (var e in LocationList)
+            {
+                //MessageBox.Show(e.LocationName);
+                LocBox.Items.Add(e.LocationName);
+            }
 
         }
 

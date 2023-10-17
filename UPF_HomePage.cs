@@ -66,8 +66,8 @@ namespace UPF_App
         {
             //TO DO: Change when update page is made
 
-            UPF_Search UPF_S = new UPF_Search();
-            UPF_S.Show();
+            TKDSchedule TKD_Sch = new TKDSchedule();
+            TKD_Sch.Show();
 
             SendMessage(this.Handle, WM_SETREDRAW, true, 0);
             this.Refresh();
@@ -105,6 +105,17 @@ namespace UPF_App
         {
             ReleaseCapture();
             SendMessage(Handle, 0x112, 0xf012, 0);
+        }
+
+        private void StartClass_Click(object sender, EventArgs e)
+        {
+            SendMessage(this.Handle, WM_SETREDRAW, false, 0);
+            StartClass UPF_StartClass = new StartClass();
+            UPF_StartClass.Show();
+
+            SendMessage(this.Handle, WM_SETREDRAW, true, 0);
+            this.Refresh();
+            Hide();
         }
     }
 }

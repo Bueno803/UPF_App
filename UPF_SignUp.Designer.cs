@@ -29,6 +29,7 @@ namespace UPF_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgeNumDownBx));
             this.label1 = new System.Windows.Forms.Label();
             this.FirstNameTxt = new System.Windows.Forms.TextBox();
@@ -67,10 +68,16 @@ namespace UPF_App
             this.BeltLvlComboBx = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.LocBox = new System.Windows.Forms.ComboBox();
+            this.BeltLbl = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.uPFSearchBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uPFSearchBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -251,6 +258,7 @@ namespace UPF_App
             resources.GetString("ClientComboBx.Items2")});
             resources.ApplyResources(this.ClientComboBx, "ClientComboBx");
             this.ClientComboBx.Name = "ClientComboBx";
+            this.ClientComboBx.SelectedIndexChanged += new System.EventHandler(this.ClientComboBx_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -389,8 +397,7 @@ namespace UPF_App
             resources.GetString("BeltLvlComboBx.Items6"),
             resources.GetString("BeltLvlComboBx.Items7"),
             resources.GetString("BeltLvlComboBx.Items8"),
-            resources.GetString("BeltLvlComboBx.Items9"),
-            resources.GetString("BeltLvlComboBx.Items10")});
+            resources.GetString("BeltLvlComboBx.Items9")});
             resources.ApplyResources(this.BeltLvlComboBx, "BeltLvlComboBx");
             this.BeltLvlComboBx.Name = "BeltLvlComboBx";
             // 
@@ -415,11 +422,46 @@ namespace UPF_App
             0,
             0});
             // 
+            // LocBox
+            // 
+            this.LocBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LocBox.FormattingEnabled = true;
+            resources.ApplyResources(this.LocBox, "LocBox");
+            this.LocBox.Name = "LocBox";
+            this.LocBox.SelectedIndexChanged += new System.EventHandler(this.LocBox_SelectedIndexChanged);
+            // 
+            // BeltLbl
+            // 
+            resources.ApplyResources(this.BeltLbl, "BeltLbl");
+            this.BeltLbl.ForeColor = System.Drawing.SystemColors.Control;
+            this.BeltLbl.Name = "BeltLbl";
+            // 
+            // label14
+            // 
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Name = "label14";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // uPFSearchBindingSource
+            // 
+            this.uPFSearchBindingSource.DataSource = typeof(UPF_App.UPF_Search);
+            // 
             // AgeNumDownBx
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(75)))), ((int)(((byte)(150)))));
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.BeltLbl);
+            this.Controls.Add(this.LocBox);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.BeltLvlComboBx);
@@ -459,6 +501,7 @@ namespace UPF_App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uPFSearchBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,6 +547,11 @@ namespace UPF_App
         private System.Windows.Forms.ComboBox BeltLvlComboBx;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox LocBox;
+        private System.Windows.Forms.Label BeltLbl;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource uPFSearchBindingSource;
     }
 }
 

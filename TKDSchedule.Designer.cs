@@ -29,19 +29,28 @@ namespace UPF_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TKDSchedule));
             this.topPanel = new System.Windows.Forms.Panel();
             this.CloseBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.BackToAdd = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.uPFSearchBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientSpaceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.topPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uPFSearchBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientSpaceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -67,10 +76,13 @@ namespace UPF_App
             this.CloseBtn.TabIndex = 41;
             this.CloseBtn.Text = "X";
             this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(144)))));
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.SearchBtn);
             this.panel1.Controls.Add(this.AddBtn);
             this.panel1.Controls.Add(this.exitBtn);
@@ -81,6 +93,42 @@ namespace UPF_App
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(190, 623);
             this.panel1.TabIndex = 42;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button2.Location = new System.Drawing.Point(0, 277);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(190, 56);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Advanced";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(0, 221);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(190, 56);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Beginner";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SearchBtn
             // 
@@ -95,9 +143,10 @@ namespace UPF_App
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(190, 56);
             this.SearchBtn.TabIndex = 4;
-            this.SearchBtn.Text = "Add New Client";
+            this.SearchBtn.Text = "Lil Tigers";
             this.SearchBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // AddBtn
             // 
@@ -135,6 +184,7 @@ namespace UPF_App
             this.exitBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exitBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // BackToAdd
             // 
@@ -155,6 +205,7 @@ namespace UPF_App
             this.BackToAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BackToAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.BackToAdd.UseVisualStyleBackColor = true;
+            this.BackToAdd.Click += new System.EventHandler(this.BackToAdd_Click);
             // 
             // pictureBox2
             // 
@@ -174,12 +225,30 @@ namespace UPF_App
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 35F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(482, 53);
+            this.label10.Location = new System.Drawing.Point(482, 28);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(291, 62);
             this.label10.TabIndex = 43;
             this.label10.Text = "Class Roster";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(247, 166);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(795, 415);
+            this.dataGridView1.TabIndex = 44;
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            // 
+            // uPFSearchBindingSource
+            // 
+            this.uPFSearchBindingSource.DataSource = typeof(UPF_App.UPF_Search);
+            // 
+            // clientSpaceBindingSource
+            // 
+            this.clientSpaceBindingSource.DataSource = typeof(UPF_App.Persistence.Domain.Client_Space);
             // 
             // TKDSchedule
             // 
@@ -187,6 +256,7 @@ namespace UPF_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(46)))), ((int)(((byte)(144)))));
             this.ClientSize = new System.Drawing.Size(1099, 623);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.panel1);
@@ -197,6 +267,9 @@ namespace UPF_App
             this.topPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uPFSearchBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientSpaceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +286,10 @@ namespace UPF_App
         private System.Windows.Forms.Button BackToAdd;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource uPFSearchBindingSource;
+        private System.Windows.Forms.BindingSource clientSpaceBindingSource;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

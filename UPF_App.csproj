@@ -168,6 +168,19 @@
     <Compile Include="Client_Info.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClassInProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassInProgress.Designer.cs">
+      <DependentUpon>ClassInProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Domain\cTag.cs" />
+    <Compile Include="StartClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartClass.Designer.cs">
+      <DependentUpon>StartClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -213,6 +226,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ClassInProgress.resx">
+      <DependentUpon>ClassInProgress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -223,6 +239,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StartClass.resx">
+      <DependentUpon>StartClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TKDSchedule.resx">
       <DependentUpon>TKDSchedule.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,4 +300,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <MoveToLibFolder Include="$(OutputPath)*.dll ; $(OutputPath)*.pdb ; $(OutputPath)*.xml" />
+    </ItemGroup>
+  </Target>
 </Project>

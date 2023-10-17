@@ -317,35 +317,119 @@ namespace UPF_App
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
+            // dataGridView1.Columns[e.ColumnIndex].Index == 17
             if (MessageBox.Show("Change Row Value", "Do you want to save the changes?", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                try
+                if (dataGridView1.Columns[e.ColumnIndex].Index == 16)
                 {
-                    //MessageBox.Show(dataGridView1.CurrentRow.Cells["ClientID"].Value.ToString());
-                    lastQuery = "UPDATE Client_Space SET " + dataGridView1.Columns[e.ColumnIndex].Name + " = '"
-                        + dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "' WHERE ClientID = " + dataGridView1.CurrentRow.Cells["ClientID"].Value;
-                    List<Client_Space> clients = new List<Client_Space>();
+                    MessageBox.Show("Belt Row");
+
+                    lastQuery =
+                        "Select Class from tkd_schedule_info where ClientID =  " + dataGridView1.CurrentRow.Cells["ClientID"].Value;
+                    List<TKD_Schedule_Info> studentClass = new List<TKD_Schedule_Info>();
                     using (con)
                     {
                         con.Open();
-                        clients = con.Query<Client_Space>(lastQuery).ToList();
-                        dataGridView1.DataSource = clients;
-         
-                        //MessageBox.Show("Information Updated", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-         
+                        studentClass = con.Query<TKD_Schedule_Info>(lastQuery).ToList();
+                        MessageBox.Show(studentClass[0].Class);
+                        con.Close();
+                    }
+
+                    if (studentClass[0].Class == "Lil-Tiger")
+                    {
+                        lastQuery = " UPDATE lil_test_ready SET FormsRdy = 0, HandAtksRdy = 0, KicksRdy = 0, BlocksRdy = 0 WHERE ClientID = " + dataGridView1.CurrentRow.Cells["ClientID"].Value;
+
+                        List<Test_Ready> Students_Checklist = new List<Test_Ready>();
+                        using (con)
+                        {
+                            con.Open();
+                            Students_Checklist = con.Query<Test_Ready>(lastQuery).ToList();
+                            con.Close();
+                        }
+                        MessageBox.Show("Little tigers all 0");
+                    }
+                    else if (studentClass[0].Class == "Beginner")
+                    {
+                        lastQuery = " UPDATE beg_test_ready SET FormsRdy = 0, HandAtksRdy = 0, KicksRdy = 0, BlocksRdy = 0 WHERE ClientID = " + dataGridView1.CurrentRow.Cells["ClientID"].Value;
+
+                        List<Test_Ready> Students_Checklist = new List<Test_Ready>();
+                        using (con)
+                        {
+                            con.Open();
+                            Students_Checklist = con.Query<Test_Ready>(lastQuery).ToList();
+                            con.Close();
+                        }
+                        MessageBox.Show("Begginer all 0");
+                    } else
+                    {
+                        lastQuery = " UPDATE adv_test_ready SET FormsRdy = 0, HandAtksRdy = 0, KicksRdy = 0, BlocksRdy = 0 WHERE ClientID = " + dataGridView1.CurrentRow.Cells["ClientID"].Value;
+
+                        List<Test_Ready> Students_Checklist = new List<Test_Ready>();
+                        using (con)
+                        {
+                            con.Open();
+                            Students_Checklist = con.Query<Test_Ready>(lastQuery).ToList();
+                            con.Close();
+                        }
+                        MessageBox.Show("Advanced all 0");
+                    }
+
+                    try
+                    {
+                        //MessageBox.Show(dataGridView1.CurrentRow.Cells["ClientID"].Value.ToString());
+                        lastQuery = "UPDATE Client_Space SET " + dataGridView1.Columns[e.ColumnIndex].Name + " = '"
+                            + dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "' WHERE ClientID = " + dataGridView1.CurrentRow.Cells["ClientID"].Value;
+                        List<Client_Space> clients = new List<Client_Space>();
+                        using (con)
+                        {
+                            con.Open();
+                            clients = con.Query<Client_Space>(lastQuery).ToList();
+                            dataGridView1.DataSource = clients;
+
+                            //MessageBox.Show("Information Updated", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+
+                    //lastQuery = "UPDATE ";
+                }
+                else
+                {
+                    try
+                    {
+                        //MessageBox.Show(dataGridView1.CurrentRow.Cells["ClientID"].Value.ToString());
+                        lastQuery = "UPDATE Client_Space SET " + dataGridView1.Columns[e.ColumnIndex].Name + " = '"
+                            + dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() + "' WHERE ClientID = " + dataGridView1.CurrentRow.Cells["ClientID"].Value;
+                        List<Client_Space> clients = new List<Client_Space>();
+                        using (con)
+                        {
+                            con.Open();
+                            clients = con.Query<Client_Space>(lastQuery).ToList();
+                            dataGridView1.DataSource = clients;
+
+                            //MessageBox.Show("Information Updated", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                 }
-                catch(Exception ex)
-                {
-                   MessageBox.Show(ex.Message);
-                }
+                
             }
             else
             {
-                MessageBox.Show("No changes have been submited");
+                MessageBox.Show("No changes have been submitted");
             }
             displayGrid();
             
         }
+
     }
 }
